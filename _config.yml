@@ -1,0 +1,29 @@
+# Site settings
+title: Abel Nieva
+subtitle: Front End Software Developer
+email: me@abelnieva.org
+description: > # this means to ignore newlines until "baseurl:"
+  Soy desarrollador de software, fotógrafo urbano, ensayista, totalmente adicto al conocimiento, un enamorado del código y el mundo JavaScript.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://abelnieva.org" # the base hostname & protocol for your site
+twitter_username: abelnieva
+
+# Build settings
+markdown: kramdown
+incremental: false
+paginate: 10
+excerpt_separator: <!--more-->
+exclude: [bower_components, node_modules, bower.json, gulpfile.js, LICENSE.txt, package.json, README.md]
+
+# Gems
+gems: [jekyll-paginate]
+
+# Defaults
+
+defaults:
+  -
+    scope:
+      type: posts
+    values:
+      layout: post
+      permalink: /essays/:title/

@@ -1,0 +1,39 @@
+/*------------------------------------*\
+  #FOOT-NAV
+\*------------------------------------*/
+
+.foot-nav {
+  @extend %clearfix;
+}
+
+  .foot-nav__list {
+    display: inline-block;
+
+    @include attention() {
+
+      .foot-nav__link {
+        color: $color-foot-nav-hover;
+      }
+
+    }
+
+  }
+
+    .foot-nav__item {
+      margin-left: $spacing-unit--extra-small;
+      margin-right: $spacing-unit--extra-small;
+    }
+
+      .foot-nav__link {
+        color: $color-foot-nav;
+
+        @include attention() {
+          color: $color-foot-nav !important;
+
+          &:before {
+            display: none;
+          }
+
+        }
+
+      }

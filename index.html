@@ -1,0 +1,86 @@
+---
+layout: default
+page-class: page--home
+---
+
+<article class="region  region--underline">
+
+  <figure>
+    <img src="/assets/img/abelnieva.jpg" alt="Abel Nieva">
+  </figure>
+
+  <h3 class="region__title">Desarrollador de software, fotógrafo urbano, emprendedor apasiona, adicto al conocimiento,
+    ensayista, enfocado en el estudio y exposición de la Biblia.</h3>
+
+  <span>En lo profesional, me encanta el código y el mundo JavaScript. Por ello, soy desarrollador de proyectos front-end
+    en <a href="http://www.gft.com/es/" target="_blank">GFT España</a>. Estoy convencido que los pequeños detalles, la
+    optimización, y las pruebas de software, contribuyen a mejorar la respuesta, impulsar las ventas, y aumentar la
+    rentabilidad. En lo personal, realmente me apasiona estudiar la Biblia. De modo que, estoy cursando una Maestría en Predicación
+    Expositíva en el <a href="https://tmai.org/" target="_blank">TMAI</a>. No creo en la religión, ya que sólo sirve para
+    ovejunar a la especie humana. Si creo en una relación personal con Dios, y ésto forma parte escencial de mi
+    cosmovisión.</span>
+
+</article><!-- /region -->
+
+<article class="region  region--underline">
+
+  <ul class="layout">
+    <li class="layout__item  [ u-1-of-1-palm  u-1-of-2-lap  u-1-of-4-desk ]  u-mb">
+      <a href="/essays/" class="btn  u-1-of-1-portable">Ensayos</a>
+    </li><!--
+--><li class="layout__item  [ u-1-of-1-palm  u-1-of-2-lap  u-1-of-4-desk ]  u-mb">
+      <a href="/projects/" class="btn  u-1-of-1-portable">Software</a>
+    </li><!--
+--><li class="layout__item  [ u-1-of-1-palm  u-1-of-2-lap  u-1-of-4-desk ]  desk-align-r  u-mb">
+      <a href="/photos/" class="btn  u-1-of-1-portable">Fotografía</a>
+    </li><!--
+--><li class="layout__item  [ u-1-of-1-palm  u-1-of-2-lap  u-1-of-4-desk ]  desk-align-r  u-mb">
+      <a href="/books/" class="btn  u-1-of-1-portable">Libros</a>
+    </li>
+  </ul>
+
+  <span>Ver también:</span>
+
+  <ul class="list-inline  list-inline--delimited  list-inline--inline">
+    <li><a href="/resolutions/" class="link  link--black  link--strong">Resoluciones Personales</a></li>
+    <li><a href="/travel/" class="link  link--black  link--strong">Historial de Viajes</a></li>
+    <li><a href="/archive/" class="link  link--black  link--strong">Archivo</a></li>
+  </ul><!-- /list-inline -->
+
+</article><!-- /region -->
+
+<article class="region  u-mb++"><!-- region--underline -->
+
+  <h2 class="region__title">Artículos Recientes <a href="/essays/">Ver todos</a></h2>
+
+  <ul>
+  {% for post in site.posts limit:6 %}
+    {% unless post.categories contains 'books' or post.categories contains 'talks' %}
+    <li>
+      {% assign m = post.date | date: "%-m" %}
+      <time datetime="{{ post.date | date_to_xmlschema  }}" class="block__date">
+        {% case m %}
+          {% when '1' %}Enero
+          {% when '2' %}Febrero
+          {% when '3' %}Marzo
+          {% when '4' %}Abril
+          {% when '5' %}Mayo
+          {% when '6' %}Junio
+          {% when '7' %}Julio
+          {% when '8' %}Agosto
+          {% when '9' %}Septiembre
+          {% when '10' %}Octubre
+          {% when '11' %}Noviembre
+          {% when '12' %}Diciembre
+        {% endcase %}
+        {{ post.date | date: "%-d, " }}
+        {{ post.date | date: "%Y" }}</time>
+      <strong><a href="{{ post.url }}" class="link  link--black">{{ post.title }}</a></strong>
+    </li>
+    {% endunless %}
+  {% endfor %}
+  </ul>
+
+</article><!-- /region -->
+
+<div class="align-c">✨ 🌝 🌚 ✨</div>

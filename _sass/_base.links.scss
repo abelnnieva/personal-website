@@ -1,0 +1,112 @@
+/*------------------------------------*\
+  #LINKS
+\*------------------------------------*/
+
+// Internal variables
+$link-transition:       0.2s;
+
+%link__hover {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: $color-links-hover;
+  bottom: 0;
+  content: '';
+  position: absolute;
+  width: 100%;
+}
+
+a,
+.link {
+  @include vendor(transition, $link-transition);
+  color: $color-links;
+  position: relative;
+  text-decoration: none;
+
+  @include attention() {
+    color: $color-links-hover;
+
+    &:before {
+      @extend %link__hover;
+    }
+
+  }
+
+}
+
+
+
+
+.link--active {
+
+  &:before {
+    @extend %link__hover;
+  }
+
+  &.link--black {
+
+    &:before {
+      border-bottom-color: $color-links-black;
+    }
+
+  }
+
+}
+
+
+
+
+.link--black {
+  color: $color-links-black;
+
+  @include attention() {
+    color: $color-links-black;
+
+    &:before {
+      border-bottom-color: $color-links-black;
+    }
+
+  }
+}
+
+
+
+
+.link--reset {
+  color: inherit;
+
+  @include attention() {
+    color: inherit;
+
+    &:before {
+      display: none;
+    }
+
+  }
+
+}
+
+
+
+
+.link--ui {
+  padding: $spacing-unit--extra-small;
+  display: block;
+
+  @include attention() {
+    background: $color-links-ui-bg;
+  }
+
+  @include media-query(desk) {
+    padding: $spacing-unit--small;
+  }
+
+}
+
+
+
+
+.link--strong {
+
+  @extend %strong;
+
+}

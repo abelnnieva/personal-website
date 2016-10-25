@@ -1,0 +1,93 @@
+/*------------------------------------*\
+  #MEDIA
+\*------------------------------------*/
+
+.media--post {
+  margin-bottom: $spacing-unit--large;
+
+  @include media-query(desk) {
+    margin-bottom: $spacing-unit--extra-large;
+  }
+
+  .media__img {
+    max-width: 225px;
+    margin-top: $spacing-unit;
+
+    @include media-query(desk) {
+      max-width: 300px;
+      margin-top: $spacing-unit--medium;
+    }
+
+  }
+
+  .media__title {
+    @include font-size($inuit-heading-size-4, 1);
+    margin-bottom: $spacing-unit--extra-small;
+
+    @include media-query(desk) {
+      @include font-size($inuit-heading-size-2, 1);
+      margin-bottom: $spacing-unit--small;
+    }
+
+  }
+
+}
+
+  .media__date {
+    @extend .post__date;
+    @include font-size(16px, 1);
+    margin-bottom: $spacing-unit--extra-small;
+
+    @include media-query(desk) {
+      margin-bottom: $spacing-unit--small;
+    }
+
+  }
+
+  .media__title {
+
+    > a {
+      color: $color-post-title;
+
+        @include attention() {
+
+          &:before {
+            border-bottom-color: $color-post-title;
+          }
+
+        }
+
+    }
+
+  }
+
+  .media__meta {
+    @include font-size(16px);
+  }
+
+
+
+
+.media--autor {
+  margin-top: $spacing-unit--medium;
+
+  @include media-query(desk) {
+    margin-top: $spacing-unit--large;
+  }
+
+  .media__img {
+    max-width: 64px;
+    border-radius: 50%;
+  }
+
+  .media__title {
+    @include font-size(16px, 1);
+    margin-bottom: 0;
+
+    @include media-query(desk) {
+      margin-bottom: $spacing-unit--extra-small;
+    }
+
+  }
+
+}

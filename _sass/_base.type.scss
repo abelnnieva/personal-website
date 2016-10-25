@@ -1,0 +1,139 @@
+/*------------------------------------*\
+  #TYPE
+\*------------------------------------*/
+
+/**
+ * Typographical base selectors.
+ */
+
+/**
+ * Headings 1–6.
+ */
+@include headings() {
+  font-weight: $semi-bold;
+  line-height: inherit;
+}
+
+
+
+
+/**
+ * Emboldened elements.
+ */
+strong, b,
+dt, %strong {
+  font-weight: $semi-bold;
+}
+
+
+
+
+/**
+ * Code-like elements.
+ */
+code, kbd, samp {
+  color: $color-code;
+  font-family: $code-family;
+  font-style: $light;
+}
+
+pre {
+  white-space: pre;
+  word-wrap: normal;
+  overflow: auto;
+  padding: $spacing-unit--extra-small;
+  background-color: $color-pre-background;
+  border-radius: $base-round;
+
+  @include media-query(desk) {
+    padding: $spacing-unit--small;
+  }
+
+  &,
+  code, kbd, samp {
+    color: $color-pre;
+  }
+
+}
+
+
+
+
+/**
+ * Figures.
+ *
+ */
+figure {
+
+  > img {
+    border-radius: $base-round;
+  }
+
+}
+
+  figcaption {
+    @include font-size(14px);
+  }
+
+
+
+
+/**
+ * Horizontal rules.
+ */
+hr,
+%hr {
+    border: none;
+    border-bottom: 1px solid $color-hr;
+}
+
+  %hr--top {
+    border: none;
+    border-top: 1px solid $color-hr;
+  }
+
+
+
+
+/**
+ * Definition list.
+ */
+dl {
+  @include font-size(14px);
+}
+
+  dt {
+    @extend %align-r;
+    float: left;
+    clear: left;
+    width: $spacing-unit--medium;
+
+    &:after {
+      content: ":";
+    }
+
+    @include media-query(desk) {
+      width: $spacing-unit--large;
+    }
+
+  }
+
+  dd {
+    margin-left: $spacing-unit--medium;
+    padding-left: $spacing-unit--extra-small;
+
+    @include media-query(desk) {
+      margin-left: $spacing-unit--large;
+      padding-left: $spacing-unit--small;
+    }
+
+  }
+
+
+
+/**
+ * Paragraphs.
+ */
+.lede {
+  font-weight: $normal;
+}

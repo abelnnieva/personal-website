@@ -1,0 +1,97 @@
+/*------------------------------------*\
+  #COLORS
+\*------------------------------------*/
+
+// Color palette
+$color-blue:              #00ADEF;
+$color-white:             #FFF;
+$color-white-light:       #F1F1F1;
+$color-gray:              #999;
+$color-gray-light:        #ddd;
+$color-black:             #000;
+$color-black-light:       #222;
+
+
+
+
+// UI color application
+$color-text:              $color-black-light;
+$color-brand:             $color-blue;
+
+
+
+
+// Page
+$inuit-base-text-color:   $color-text;
+
+
+
+
+// Links
+$color-links:             $color-brand;
+$color-links-hover:       darken($color-links, 10%);
+$color-links-black:       $color-text;
+$color-links-ui-bg:       $color-white-light;
+
+
+
+
+// Text
+$color-code:              $color-brand;
+$color-pre-background:    $color-gray;
+$color-pre:               $color-text;
+$color-hr:                $color-gray-light;
+
+
+
+
+// Iconic
+$color-iconic:            $color-gray-light;
+
+
+
+
+// Buttons
+$color-btn:               $color-links;
+$color-btn-hover:         $color-links-hover;
+
+
+
+
+// Site nav
+$color-site-nav:          $color-gray;
+$color-site-nav-hover:    $color-text;
+
+
+
+
+// Foot nav
+$color-foot-nav:          $color-text;
+$color-foot-nav-hover:   $color-gray-light;
+
+
+
+
+// Page head
+$color-page-head:         $color-text;
+
+
+
+
+// Post
+$color-post-title:        $color-text;
+$color-post-date:         $color-gray;
+
+
+
+
+// Block
+$color-block-book-img:          $color-white-light;
+$color-block-book-img-hover:    $color-gray-light;
+$color-block-date:              $color-post-date;
+
+
+
+
+// lightbox
+$color-bg-lightbox:             $color-black;

@@ -1,0 +1,37 @@
+---
+layout: page
+title: Archivo (en orden cronológico)
+page-class: page--archive
+permalink: /archive/
+---
+
+<ul class="layout  u-mb">
+  {% for post in site.posts %}<!--
+  --><li class="layout__item  [ u-1-of-1-palm  u-1-of-2-lap  u-1-of-3-desk ]  u-mb">
+      <a href="{{ post.url }}" class="link  link--reset  link--ui">
+        {% assign m = post.date | date: "%-m" %}
+        <time datetime="{{ post.date | date_to_xmlschema  }}" class="block__date">
+          {% case m %}
+            {% when '1' %}Enero
+            {% when '2' %}Febrero
+            {% when '3' %}Marzo
+            {% when '4' %}Abril
+            {% when '5' %}Mayo
+            {% when '6' %}Junio
+            {% when '7' %}Julio
+            {% when '8' %}Agosto
+            {% when '9' %}Septiembre
+            {% when '10' %}Octubre
+            {% when '11' %}Noviembre
+            {% when '12' %}Diciembre
+          {% endcase %}
+          {{ post.date | date: "%-d, " }}
+          {{ post.date | date: "%Y" }}
+        </time>
+        <h4 class="block__title">{{ post.title }}</h4>
+      </a>
+    </li><!--
+  -->{% endfor %}
+</ul><!-- /layout -->
+
+<div class="align-c">✨ 🌝 🌚 ✨</div>

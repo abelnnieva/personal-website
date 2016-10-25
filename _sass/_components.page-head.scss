@@ -1,0 +1,49 @@
+/*------------------------------------*\
+  #PAGE-HEAD
+\*------------------------------------*/
+
+.page-head {
+  @extend %align-c;
+  @extend %hr;
+  margin-bottom: $spacing-unit;
+  margin-top: $spacing-unit--large;
+  padding-bottom: $spacing-unit;
+
+  @include media-query(desk) {
+    margin-bottom: $spacing-unit--medium;
+    margin-top: $spacing-unit--extra-large;
+    padding-bottom: $spacing-unit--medium;
+  }
+
+}
+
+  a.page-head__title {
+
+    @include attention() {
+      color: $color-page-head;
+
+      &:before {
+        display: none;
+      }
+
+    }
+
+  }
+
+  .page-head__title {
+    @include font-size(42px);
+    color: $color-page-head;
+    display: inline-block;
+    font-weight: $normal;
+    margin-bottom: $spacing-unit--extra-small;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    @include media-query(lap-and-up) {
+      @include font-size(52px);
+    }
+
+    @include media-query(desk) {
+      margin-bottom: $spacing-unit--small;
+    }
+  }

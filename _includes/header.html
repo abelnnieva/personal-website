@@ -1,0 +1,22 @@
+<header class="page-head">
+
+  {% if page.title %}
+    <a href="/" class="page-head__title">{{ site.title }}</a>
+  {% else %}
+    <h1 class="page-head__title">{{ site.title }}</h1>
+  {% endif %}
+
+  <nav class="site-nav">
+
+    <ul class="site-nav__list  list-inline">
+      <li class="site-nav__item"><a href="/essays/" class="site-nav__link  site-nav__essays">Ensayos</a></li>
+      <li class="site-nav__item"><a href="/talks/" class="site-nav__link  site-nav__talks">Conferencias</a></li>
+      <li class="site-nav__item"><a href="/projects/" class="site-nav__link  site-nav__projects">Software</a></li>
+      <li class="site-nav__item"><a href="/photos/" class="site-nav__link  site-nav__photos">Fotografía</a></li>
+      <li class="site-nav__item"><a href="/books/" class="site-nav__link  site-nav__books">Libros</a></li>
+      <li class="site-nav__item"><a href="/things/" class="site-nav__link  site-nav__things">Cosas</a></li>
+    </ul>
+
+  </nav><!-- /site-nav -->
+
+</header><!-- /page-head -->

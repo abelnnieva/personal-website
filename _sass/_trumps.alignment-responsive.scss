@@ -1,0 +1,59 @@
+/*------------------------------------*\
+  #ALIGNMENT-RESPONSIVE
+\*------------------------------------*/
+
+.align-l, %align-l         { text-align: left; }
+.align-c, %align-c         { text-align: center; }
+.align-r, %align-r         { text-align: right; }
+
+@include media-query(palm) {
+
+    .palm-align-l         { text-align: left; }
+    .palm-align-c         { text-align: center; }
+    .palm-align-r         { text-align: right; }
+
+}
+
+
+
+
+@include media-query(lap) {
+
+    .lap-align-l         { text-align: left; }
+    .lap-align-c         { text-align: center; }
+    .lap-align-r         { text-align: right; }
+
+}
+
+
+
+
+@include media-query(lap-and-up) {
+
+    .lap-and-up-align-l         { text-align: left; }
+    .lap-and-up-align-c         { text-align: center; }
+    .lap-and-up-align-r         { text-align: right; }
+
+}
+
+
+
+
+@include media-query(portable) {
+
+    .portable-align-l         { text-align: left; }
+    .portable-align-c         { text-align: center; }
+    .portable-align-r         { text-align: right; }
+
+}
+
+
+
+
+@include media-query(desk) {
+
+    .desk-align-l         { text-align: left; }
+    .desk-align-c         { text-align: center; }
+    .desk-align-r         { text-align: right; }
+
+}

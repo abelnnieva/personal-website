@@ -1,0 +1,51 @@
+/*------------------------------------*\
+  #SITE-NAV
+\*------------------------------------*/
+
+.site-nav {
+  @extend %clearfix;
+  @include font-size(14px);
+  text-transform: uppercase;
+
+}
+
+  .site-nav__item {
+    margin-left: $spacing-unit--extra-small;
+    margin-right: $spacing-unit--extra-small;
+
+    @include media-query(desk) {
+      margin-left: $spacing-unit--small;
+      margin-right: $spacing-unit--small;
+    }
+
+  }
+
+    .site-nav__link {
+      display: block;
+      color: $color-site-nav;
+
+      &:before {
+        border-bottom-color: $color-site-nav-hover !important;
+      }
+
+      @include attention() {
+        color: $color-site-nav-hover;
+      }
+
+    }
+
+    %site-nav__current {
+      color: $color-site-nav-hover;
+
+      &:before {
+        @extend %link__hover;
+      }
+    }
+
+    @each $page in essays, talks, projects, photos, books, things {
+
+        .page--#{$page} .site-nav__#{$page} {
+            @extend %site-nav__current;
+        }
+
+    }

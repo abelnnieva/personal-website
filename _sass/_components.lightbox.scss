@@ -1,0 +1,45 @@
+/*------------------------------------*\
+  #LIGHTBOX
+\*------------------------------------*/
+
+.lightbox {
+  background: $color-bg-lightbox;
+  display: table;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100vw;
+  z-index: 1000;
+}
+
+  .lightbox__item {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .lightbox__btn {
+    @extend .btn;
+    background: none;
+    border: 0;
+    position: absolute;
+    right: $spacing-unit--small;
+    top: $spacing-unit--small;
+
+    @include media-query(desk) {
+      padding: $spacing-unit--extra-small;
+      right: $spacing-unit;
+      top: $spacing-unit;
+    }
+
+    @include attention() {
+      background: none;
+    }
+
+    .icon {
+      @include font-size(14px, false);
+      display: block;
+    }
+
+  }

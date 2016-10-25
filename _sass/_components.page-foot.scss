@@ -1,0 +1,19 @@
+/*------------------------------------*\
+  #PAGE-FOOT
+\*------------------------------------*/
+
+.page-foot {
+  @extend %align-c;
+  @extend %hr--top;
+  margin-bottom: $spacing-unit--large;
+  margin-top: $spacing-unit;
+  padding-top: $spacing-unit;
+  position: relative;
+
+  @include media-query(desk) {
+    margin-bottom: $spacing-unit--extra-large;
+    margin-top: $spacing-unit--medium;
+    padding-top: $spacing-unit--medium;
+  }
+
+}

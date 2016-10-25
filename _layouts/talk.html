@@ -1,0 +1,50 @@
+---
+layout: default
+---
+
+<article class="region">
+
+  <h1 class="region__title">{{ page.title }}</h1>
+
+  <div class="layout  u-mb">
+  
+    <div class="layout__item  [ u-1-of-1-palm  u-2-of-3-desk ]  talk">
+      {{ content }}
+    </div><!--
+
+ --><div class="layout__item  [ u-1-of-1-palm  u-1-of-3-desk ]">
+
+      <dl>
+        <dt>Texto</dt><dd>{{ page.scripture }}</dd>
+        <dt>Lugar</dt><dd>{{ page.place }}</dd>
+        <dt>Fecha</dt>
+        <dd>
+          {% assign m = page.date | date: "%-m" %}
+          <time datetime="{{ page.date | date_to_xmlschema  }}">
+            {% case m %}
+              {% when '1' %}Enero
+              {% when '2' %}Febrero
+              {% when '3' %}Marzo
+              {% when '4' %}Abril
+              {% when '5' %}Mayo
+              {% when '6' %}Junio
+              {% when '7' %}Julio
+              {% when '8' %}Agosto
+              {% when '9' %}Septiembre
+              {% when '10' %}Octubre
+              {% when '11' %}Noviembre
+              {% when '12' %}Diciembre
+            {% endcase %}
+            {{ page.date | date: "%-d, " }}
+            {{ page.date | date: "%Y" }}
+          </time>
+        </dd>
+      </dl>
+
+    </div>
+
+  </div><!-- /layout -->
+
+  <iframe class="u-mb+" width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{ page.soundcloud-id }}&amp;color=00adef&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+
+</article><!-- /region -->

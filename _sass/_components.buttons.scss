@@ -1,0 +1,24 @@
+/*------------------------------------*\
+  #BUTTONS
+\*------------------------------------*/
+
+// Internal variables
+$btn-transition:       0.2s;
+
+.btn {
+  @include vendor(transition, $btn-transition);
+  font-weight: $semi-bold;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+
+  @include attention() {
+    background-color: $color-btn-hover;
+        border-color: $color-btn-hover;
+
+    &:before {
+      display: none;
+    }
+
+  }
+
+}

@@ -1,0 +1,41 @@
+/*------------------------------------*\
+  #BLOCK
+\*------------------------------------*/
+
+// Internal variables
+$block-book-img-height:     200px;
+
+.block--book {
+
+  .block__img {
+    @extend %align-c;
+    max-height: $block-book-img-height;
+    padding: $spacing-unit--extra-small 0;
+    background-color: $color-block-book-img;
+    box-sizing: content-box;
+
+    @include media-query(desk) {
+      padding: $spacing-unit--small 0;
+      margin-bottom: $spacing-unit--extra-small;
+    }
+
+    > img {
+      max-height: inherit;
+    }
+
+    @include attention() {
+      background-color: $color-block-book-img-hover;
+    }
+
+  }
+
+}
+
+  .block__date {
+    color: $color-block-date;
+  }
+
+  .block__title {
+    margin-bottom: $spacing-unit--extra-small;
+
+  }

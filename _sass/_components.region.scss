@@ -1,0 +1,34 @@
+/*------------------------------------*\
+  #REGION
+\*------------------------------------*/
+
+.region {
+  margin-bottom: $spacing-unit;
+
+  @include media-query(desk) {
+    margin-bottom: $spacing-unit--medium;
+  }
+
+}
+
+  .region__title {
+
+    > a {
+      @include font-size($inuit-base-font-size);
+      font-weight: $light;
+    }
+
+  }
+
+
+
+
+.region--underline {
+  @extend %hr;
+  padding-bottom: $spacing-unit;
+
+  @include media-query(desk) {
+    padding-bottom: $spacing-unit--medium;
+  }
+
+}

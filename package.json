@@ -1,0 +1,23 @@
+{
+  "name": "abelnieva",
+  "version": "0.0.1",
+  "description": "The source code of personal website based on Jekyll.",
+  "homepage": "http://abelnieva.org",
+  "author": {
+    "name": "Abel Nieva",
+    "email": "me@abelnieva.org"
+  },
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.14.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-concat": "^2.6.0",
+    "gulp-header": "^1.8.8",
+    "gulp-sass": "^2.3.2",
+    "gulp-strip-css-comments": "^1.2.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7"
+  }
+}

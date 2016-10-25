@@ -1,0 +1,75 @@
+/*------------------------------------*\
+  #POST
+\*------------------------------------*/
+
+.post {
+  margin-bottom: $spacing-unit--large;
+
+  @include media-query(desk) {
+    margin-bottom: $spacing-unit--extra-large;
+  }
+}
+
+  .post__title {
+    @include font-size($inuit-heading-size-2);
+
+    @include media-query(desk) {
+      @include font-size($inuit-heading-size-1);
+    }
+
+    > a {
+      color: $color-post-title;
+
+        @include attention() {
+
+          &:before {
+            border-bottom-color: $color-post-title;
+          }
+
+        }
+
+    }
+
+  }
+
+  .post__date {
+    color: $color-post-date;
+    display: block;
+  }
+
+  .post__cover {
+    margin-bottom: $spacing-unit--medium;
+
+    @include media-query(desk) {
+      margin-bottom: $spacing-unit--large;
+    }
+
+  }
+
+  .post__meta {
+    margin-top: $spacing-unit--medium;
+
+    @include media-query(desk) {
+      margin-top: $spacing-unit--large;
+    }
+
+  }
+
+
+
+
+.post--book {
+
+  .post__cover {
+    display: inline;
+    float: right;
+    max-width: 275px;
+    margin-left: $spacing-unit--medium;
+
+    @include media-query(desk) {
+      margin-left: $spacing-unit--large;
+    }
+
+  }
+
+}
