@@ -2,7 +2,6 @@
 title: "Mi primer paso"
 date: 2016-10-26
 categories: "memories"
-meta: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
 page-class: page--essays
 ---
 
