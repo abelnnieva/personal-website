@@ -10,11 +10,9 @@
   }
 }
 
-  .post__title {
-    @include font-size($inuit-heading-size-2);
-
-    @include media-query(desk) {
-      @include font-size($inuit-heading-size-1);
+  h1.post__title {
+    @include media-query(portable) {
+      @include font-size($inuit-heading-size-2);
     }
 
     > a {
@@ -35,6 +33,11 @@
   .post__date {
     color: $color-post-date;
     display: block;
+
+    @include media-query(palm) {
+      @include font-size(14px);
+    }
+
   }
 
   .post__cover {
@@ -68,6 +71,32 @@
 
     @include media-query(desk) {
       margin-left: $spacing-unit--large;
+    }
+
+  }
+
+}
+
+
+
+
+.post--list {
+  margin-bottom: $spacing-unit;
+
+  .post__title {
+    margin-bottom: 0;
+
+    @include media-query(lap-and-up) {
+      display: inline;
+    }
+
+  }
+
+  .post__date {
+    line-height: 1;
+
+    @include media-query(lap-and-up) {
+      display: inline;
     }
 
   }

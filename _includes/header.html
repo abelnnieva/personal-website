@@ -1,20 +1,20 @@
-<header class="page-head">
+<header class="page-head" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
   {% if page.title %}
-    <a href="/" class="page-head__title">{{ site.title }}</a>
+    <a href="/" class="page-head__title" itemprop="headline">{{ site.title }}</a>
   {% else %}
-    <h1 class="page-head__title">{{ site.title }}</h1>
+    <h1 class="page-head__title" itemprop="headline">{{ site.title }}</h1>
   {% endif %}
 
-  <nav class="site-nav">
+  <nav class="site-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 
     <ul class="site-nav__list  list-inline">
-      <li class="site-nav__item"><a href="/essays/" class="site-nav__link  site-nav__essays">Ensayos</a></li>
-      <li class="site-nav__item"><a href="/talks/" class="site-nav__link  site-nav__talks">Conferencias</a></li>
-      <li class="site-nav__item"><a href="/projects/" class="site-nav__link  site-nav__projects">Software</a></li>
-      <li class="site-nav__item"><a href="/photos/" class="site-nav__link  site-nav__photos">Fotografía</a></li>
-      <li class="site-nav__item"><a href="/books/" class="site-nav__link  site-nav__books">Libros</a></li>
-      <li class="site-nav__item"><a href="/things/" class="site-nav__link  site-nav__things">Cosas</a></li>
+      <li class="site-nav__item"><a href="/essays/" class="site-nav__link  site-nav__essays" title="Ensayos" itemprop="name">Ensayos</a></li>
+      <li class="site-nav__item"><a href="/talks/" class="site-nav__link  site-nav__talks" title="Conferencias" itemprop="name">Conferencias</a></li>
+      <li class="site-nav__item"><a href="/projects/" class="site-nav__link  site-nav__projects" title="Software" itemprop="name">Software</a></li>
+      <li class="site-nav__item"><a href="/photos/" class="site-nav__link  site-nav__photos" title="Fotografía" itemprop="name">Fotografía</a></li>
+      <li class="site-nav__item"><a href="/books/" class="site-nav__link  site-nav__books" title="Libros" itemprop="name">Libros</a></li>
+      <li class="site-nav__item"><a href="/things/" class="site-nav__link  site-nav__things" title="Cosas" itemprop="name">Cosas</a></li>
     </ul>
 
   </nav><!-- /site-nav -->

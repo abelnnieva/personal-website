@@ -2,6 +2,16 @@
   #LISTS
 \*------------------------------------*/
 
+.list--responsive {
+
+  @include media-query(palm) {
+    list-style: none;
+    margin-left: 0;
+  }
+
+}
+
+
 .list-inline--inline {
   display: inline;
 }

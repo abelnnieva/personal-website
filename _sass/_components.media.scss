@@ -31,9 +31,7 @@
 
   }
 
-}
-
-  .media__date {
+  .post__date {
     @extend .post__date;
     @include font-size(16px, 1);
     margin-bottom: $spacing-unit--extra-small;
@@ -43,6 +41,8 @@
     }
 
   }
+
+}
 
   .media__title {
 

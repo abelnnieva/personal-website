@@ -4,15 +4,15 @@ layout: default
 
 {% assign type = page.page-class %}
 
-<article class="post  {% if type == 'page--books' %}post--book{% endif %}" data-ui-component="Main content">
+<article class="post  {% if type == 'page--books' %}post--book{% endif %}" itemscope itemType="http://schema.org/BlogPosting">
 
   {% if type == 'page--essays' %}
-  <img src="/assets/img/essays/{{ page.slug }}.jpg" class="post__cover">
+  <img src="/assets/img/essays/{{ page.slug }}.jpg" class="post__cover" itemprop="image">
   {% endif %}
 
   {% assign m = page.date | date: "%-m" %}
 
-  <time class="post__date" datetime="{{ page.date | date_to_xmlschema  }}">
+  <time class="post__date" datetime="{{ page.date | date_to_xmlschema  }}" itemprop="datePublished">
     {% case m %}
       {% when '1' %}Enero
       {% when '2' %}Febrero
@@ -31,22 +31,22 @@ layout: default
     {{ page.date | date: "%Y" }}
   </time>
 
-  <h1 class="post__title">{{ page.title }}</h1>
+  <h1 class="post__title" itemprop="headline">{{ page.title }}</h1>
 
   {% if type == 'page--books' %}
-  <figure class="post__cover">
-    <img src="/assets/img/books/{{ page.slug }}.jpg">
-    <figcaption>{{ page.book-data }}</figcaption>
+  <figure class="post__cover" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+    <img src="/assets/img/books/{{ page.slug }}.jpg" itemprop="contentUrl">>
+    <figcaption itemprop="caption">{{ page.book-data }}</figcaption>
   </figure>
   {% endif %}
 
   {{ content }}
 
-  <small class="media  media--autor">
-    <img src="/assets/img/abelnieva.avatar.jpg" alt="" class="media__img" />
+  <small class="media  media--autor" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img src="/assets/img/abelnieva.avatar.jpg" alt="" class="media__img" itemprop="image" />
     <div class="media__body">
-      <h6 class="media__title">Abel Nieva</h6>
-      <p>Desarrollador de software en <a href="http://www.gft.com/es/" target="_blank">GFT España</a>, fotógrafo urbano,
+      <h6 class="media__title" itemprop="name">Abel Nieva</h6>
+      <p itemprop="description">Desarrollador de software en <a href="http://www.gft.com/es/" target="_blank">GFT España</a>, fotógrafo urbano,
       emprendedor apasionado, adicto al conocimiento, ensayista, enfocado en el estudio y exposición de la Biblia,
       estudiante de una Maestría en Predicación Expositíva en el <a href="https://tmai.org/" target="_blank">TMAI</a>.</p>
     </div>
@@ -55,10 +55,10 @@ layout: default
   {% if type == 'page--essays' %}
   <div class="post__meta">
     <span>En </span>
-    <ul class="list-inline  list-inline--delimited  list-inline--inline">
+    <ul class="list-inline  list-inline--delimited  list-inline--inline" itemprop="keywords" itemscope itemtype="http://schema.org/ItemList">
     {% for category in page.categories %}
-      <li>
-        <a href="/essays/{{ category }}/">
+      <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <a href="/essays/{{ category }}/" itemprop="item">
         {% case category %}
           {% when 'memories' %}Memorias
         {% endcase %}

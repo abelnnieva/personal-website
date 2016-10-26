@@ -3,11 +3,17 @@
 
   {% include head.html %}
 
-  <body class="wrapper">
+  <body class="wrapper" itemscope {% if page.page-class == 'page--photos' %}itemtype="http://schema.org/ImageGallery"{% else %}itemtype="http://schema.org/WebPage"{% endif %}>
+
+    {% include ga.html %}
 
     {% include header.html %}
 
-    {{ content }}
+    <main class="page-body" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Blog">
+
+      {{ content }}
+
+    </main>
 
     {% include footer.html %}
 

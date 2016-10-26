@@ -4,36 +4,33 @@
 
 .foot-nav {
   @extend %clearfix;
-}
+  display: inline-block;
 
-  .foot-nav__list {
-    display: inline-block;
+  @include attention() {
 
-    @include attention() {
-
-      .foot-nav__link {
-        color: $color-foot-nav-hover;
-      }
-
+    .foot-nav__link {
+      color: $color-foot-nav-hover;
     }
 
   }
 
-    .foot-nav__item {
-      margin-left: $spacing-unit--extra-small;
-      margin-right: $spacing-unit--extra-small;
-    }
+}
 
-      .foot-nav__link {
-        color: $color-foot-nav;
+  .foot-nav__item {
+    margin-left: $spacing-unit--extra-small;
+    margin-right: $spacing-unit--extra-small;
+  }
 
-        @include attention() {
-          color: $color-foot-nav !important;
+    .foot-nav__link {
+      color: $color-foot-nav;
 
-          &:before {
-            display: none;
-          }
+      @include attention() {
+        color: $color-foot-nav !important;
 
+        &:before {
+          display: none;
         }
 
       }
+
+    }

@@ -2,25 +2,25 @@
 layout: default
 ---
 
-<article class="region">
+<article class="region" itemscope itemtype="http://schema.org/AudioObject">
 
-  <h1 class="region__title">{{ page.title }}</h1>
+  <h1 class="region__title" itemprop="name">{{ page.title }}</h1>
 
   <div class="layout  u-mb">
-  
-    <div class="layout__item  [ u-1-of-1-palm  u-2-of-3-desk ]  talk">
+
+    <div class="layout__item  [ u-1-of-1-palm  u-2-of-3-desk ]  talk" itemprop="description">
       {{ content }}
     </div><!--
 
  --><div class="layout__item  [ u-1-of-1-palm  u-1-of-3-desk ]">
 
       <dl>
-        <dt>Texto</dt><dd>{{ page.scripture }}</dd>
-        <dt>Lugar</dt><dd>{{ page.place }}</dd>
+        <dt>Texto</dt><dd itemprop="about">{{ page.scripture }}</dd>
+        <dt>Lugar</dt><dd itemprop="locationCreated">{{ page.place }}</dd>
         <dt>Fecha</dt>
         <dd>
           {% assign m = page.date | date: "%-m" %}
-          <time datetime="{{ page.date | date_to_xmlschema  }}">
+          <time datetime="{{ page.date | date_to_xmlschema  }}" itemprop="dateCreated">
             {% case m %}
               {% when '1' %}Enero
               {% when '2' %}Febrero
@@ -45,6 +45,7 @@ layout: default
 
   </div><!-- /layout -->
 
-  <iframe class="u-mb+" width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{ page.soundcloud-id }}&amp;color=00adef&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+  <iframe class="u-mb+" width="100%" height="166" scrolling="no" frameborder="no" itemprop="audio"
+    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{ page.soundcloud-id }}&amp;color=00adef&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
 
 </article><!-- /region -->

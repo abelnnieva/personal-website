@@ -14,6 +14,24 @@
   line-height: inherit;
 }
 
+h1 {
+  @include media-query(palm) {
+    @include font-size($inuit-heading-size-2);
+  }
+}
+
+h2 {
+  @include media-query(palm) {
+    @include font-size($inuit-heading-size-3);
+  }
+}
+
+h3 {
+  @include media-query(palm) {
+    @include font-size($inuit-heading-size-4);
+  }
+}
+
 
 
 

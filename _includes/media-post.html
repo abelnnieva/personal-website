@@ -1,0 +1,33 @@
+<article class="media  media--post" itemscope itemType="http://schema.org/BlogPosting" itemid="{{ post.url | prepend: site.baseurl }}">
+
+  <a href="{{ post.url | prepend: site.baseurl }}" class="media__img  hide-palm  [ link  link--reset ]">
+    <img src="/assets/img/essays/{{ post.slug }}.jpg" itemprop="thumbnail" />
+  </a>
+
+  <div class="media__body">
+    {% include time.html %}
+
+    <h2 class="media__title" itemprop="headline"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+
+    <link href="{{ post.url }}" itemprop="url" />
+
+    <p itemprop="description">{{ post.excerpt | remove: '<p>' | remove: '</p>' }} [...]</p>
+
+    <div class="media__meta">
+      <span>En </span>
+
+      <ul class="list-inline  list-inline--delimited  list-inline--inline" itemprop="keywords" itemscope itemtype="http://schema.org/ItemList">
+      {% for category in post.categories %}
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="/essays/{{ category }}/" itemprop="item">
+          {% case category %}
+            {% when 'memories' %}Memorias
+          {% endcase %}
+          </a>
+        </li>
+      {% endfor %}
+      </ul><!-- /list-inline -->
+    </div>
+  </div>
+
+</article><!-- /media -->
