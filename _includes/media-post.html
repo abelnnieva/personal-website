@@ -19,9 +19,9 @@
       <ul class="list-inline  list-inline--delimited  list-inline--inline" itemprop="keywords" itemscope itemtype="http://schema.org/ItemList">
       {% for category in post.categories %}
         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-          <a href="/essays/{{ category }}/" itemprop="item">
+          <a href="/ensayos/{{ category }}/" itemprop="item">
           {% case category %}
-            {% when 'memories' %}Memorias
+            {% when 'memorias' %}Memorias
           {% endcase %}
           </a>
         </li>

@@ -26,4 +26,4 @@ defaults:
       type: posts
     values:
       layout: post
-      permalink: /essays/:title/
+      permalink: /ensayos/:title/

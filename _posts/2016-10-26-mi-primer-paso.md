@@ -1,7 +1,7 @@
 ---
 title: "Mi primer paso"
 date: 2016-10-26
-categories: "memories"
+categories: "memorias"
 page-class: page--essays
 ---
 
