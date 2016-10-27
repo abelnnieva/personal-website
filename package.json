@@ -2,10 +2,10 @@
   "name": "abelnieva",
   "version": "0.0.1",
   "description": "The source code of personal website based on Jekyll.",
-  "homepage": "http://abelnieva.org",
+  "homepage": "http://abelnieva.com",
   "author": {
     "name": "Abel Nieva",
-    "email": "me@abelnieva.org"
+    "email": "abel@abelnieva.com"
   },
   "license": "ISC",
   "dependencies": {},
