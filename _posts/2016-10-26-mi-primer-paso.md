@@ -5,7 +5,7 @@ categories: "memorias"
 page-class: page--essays
 ---
 
-Según me cuenta mi madre, empecé a andar a los diez meses de edad cuando estaba sentado al lado de mi carrito de bebé. Me agarré fuertemente de él, me puse de pie de un tirón, y empecé a dar espontanemente mis primeros pasos.<!--more--> Al instante, ella se ubicó delante de mí —como a un metro de distancia—, y lentamente conseguí llegar hasta sus brazos. Seguro que aquello resultó muy enternecedor para ella, de hecho, me confesó que cada detalle permanece indeleble en su memoria.
+Según me cuenta mi madre, empecé a andar a los diez meses de edad cuando estaba sentado al lado de mi carrito de bebé. Me agarré fuertemente de él, me puse de pie de un tirón, y empecé a dar espontanemente mis primeros pasos.<!--more--> Al instante, ella se ubicó delante de mí —como a un metro de distancia—, y lentamente conseguí llegar hasta sus brazos. Seguro que aquello resultó muy enternecedor para ella, de hecho, me confesó que cada detalle permanece indeleble en su memoria hasta hoy.
 
 Está claro que me lancé a caminar por mí mismo, no obstante, durante la práctica recibí la inestimable ayuda de mis padres. Su apoyo me permitió ganar fuerza, habilidad, equilibrio, y una postura adecuada. No pude caminar correctamente hasta que mis piernas estuvieron firmes, y la musculatura de mi espalda completamente fortalecida. Hoy en día, mientras contemplo la fotografía de mi padre sujetando mis pequeñas manos, puedo imaginar la seguridad que me otorgaron sus fuertes brazos. Estoy seguro que gracias a ello aprendí a caminar en tan solo diez meses.
 

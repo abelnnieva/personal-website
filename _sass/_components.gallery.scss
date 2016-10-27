@@ -4,6 +4,7 @@
 
 .gallery {
   @extend .layout;
+  @extend .palm-align-c;
 
   li {
     @extend .layout__item;
