@@ -7,3 +7,19 @@ html {
   font-weight: $light;
 
 }
+
+
+
+
+.page--travel {
+
+}
+
+  .page-travel__map {
+
+    @include media-query(lap-and-up) {
+      max-width: 450px;
+
+    }
+
+  }
