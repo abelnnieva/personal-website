@@ -28,9 +28,8 @@ $inuit-base-text-color:   $color-text;
 
 
 // Links
-$color-links:             $color-brand;
-$color-links-hover:       darken($color-links, 10%);
-$color-links-black:       $color-text;
+$color-links:             $color-text;
+$color-links-hover:       $color-brand;
 $color-links-ui-bg:       $color-white-light;
 
 
@@ -52,28 +51,27 @@ $color-iconic:            $color-gray-light;
 
 
 // Buttons
-$color-btn:               $color-links;
-$color-btn-hover:         $color-links-hover;
+$color-btn:                   $color-brand;
+$color-btn-hover:             darken($color-btn, 10%);
+$color-btn-clear:             $color-text;
+$color-btn-clear-bg:          $color-white;
+$color-btn-clear-hover-bg:    $color-btn;
 
 
 
 
 // Site nav
-$color-site-nav:          $color-gray;
-$color-site-nav-hover:    $color-text;
+$color-site-nav:          $color-text;
+$color-site-nav-hover:    $color-site-nav;
+$color-bg-site-nav:       $color-white;
 
 
 
 
 // Foot nav
 $color-foot-nav:          $color-text;
-$color-foot-nav-hover:   $color-gray-light;
+$color-foot-nav-hover:    $color-gray-light;
 
-
-
-
-// Page head
-$color-page-head:         $color-text;
 
 
 
@@ -95,3 +93,9 @@ $color-block-date:              $color-post-date;
 
 // lightbox
 $color-bg-lightbox:             $color-black;
+
+
+
+
+// Region
+$color-region-title-border:     $color-black;

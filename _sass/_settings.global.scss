@@ -2,7 +2,6 @@
   #GLOBAL
 \*------------------------------------*/
 
-$brand-color:     #ff5252;
 $brand-round:     0;
 $base-round:      $brand-round;
 
@@ -17,8 +16,9 @@ $inuit-base-line-height:        28px;
 
 
 // Typography
-$base-family:     'Source Sans Pro', sans-serif;
-$code-family:     Inconsolata, Monaco, Consolas, 'Andale Mono', 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
+$base-family:                   'Source Sans Pro', Helvetica, Arial, sans-serif;
+$secondary-family:              'PT Sans', sans-serif;
+$code-family:                   Inconsolata, Monaco, Consolas, 'Andale Mono', 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
 
 $thin:            200;
 $light:           300;

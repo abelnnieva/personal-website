@@ -101,12 +101,10 @@ figure {
  */
 hr,
 %hr {
-    border: none;
     border-bottom: 1px solid $color-hr;
 }
 
   %hr--top {
-    border: none;
     border-top: 1px solid $color-hr;
   }
 

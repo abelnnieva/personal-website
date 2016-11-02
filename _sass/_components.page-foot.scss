@@ -5,15 +5,19 @@
 .page-foot {
   @extend %align-c;
   @extend %hr--top;
-  margin-bottom: $spacing-unit--large;
+  margin-bottom: $spacing-unit--medium;
   margin-top: $spacing-unit;
   padding-top: $spacing-unit;
   position: relative;
 
   @include media-query(desk) {
-    margin-bottom: $spacing-unit--extra-large;
+    margin-bottom: $spacing-unit--large;
     margin-top: $spacing-unit--medium;
     padding-top: $spacing-unit--medium;
   }
 
 }
+
+  .page-foot__copyright {
+    @include font-size(14px);
+  }

@@ -5,6 +5,7 @@
 .foot-nav {
   @extend %clearfix;
   display: inline-block;
+  margin-bottom: $spacing-unit;
 
   @include attention() {
 
@@ -22,15 +23,10 @@
   }
 
     .foot-nav__link {
-      color: $color-foot-nav;
+      @extend %link-reset;
 
       @include attention() {
         color: $color-foot-nav !important;
-
-        &:before {
-          display: none;
-        }
-
       }
 
     }

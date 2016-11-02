@@ -6,29 +6,19 @@
 $link-transition:       0.2s;
 
 %link__hover {
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: $color-links-hover;
-  bottom: 0;
-  content: '';
-  position: absolute;
-  width: 100%;
+  border-bottom: 1px solid currentColor;
 }
 
 a,
 .link {
   @include vendor(transition, $link-transition);
   color: $color-links;
-  position: relative;
   text-decoration: none;
+  border-bottom: 1px dotted currentColor;
 
   @include attention() {
+    @extend %link__hover;
     color: $color-links-hover;
-
-    &:before {
-      @extend %link__hover;
-    }
-
   }
 
 }
@@ -37,50 +27,20 @@ a,
 
 
 .link--active {
-
-  &:before {
-    @extend %link__hover;
-  }
-
-  &.link--black {
-
-    &:before {
-      border-bottom-color: $color-links-black;
-    }
-
-  }
-
+  @extend %link__hover;
 }
 
 
 
 
-.link--black {
-  color: $color-links-black;
-
-  @include attention() {
-    color: $color-links-black;
-
-    &:before {
-      border-bottom-color: $color-links-black;
-    }
-
-  }
-}
-
-
-
-
-.link--reset {
+.link--reset,
+%link-reset {
+  border: none;
   color: inherit;
 
   @include attention() {
+    border: none;
     color: inherit;
-
-    &:before {
-      display: none;
-    }
-
   }
 
 }
@@ -105,8 +65,12 @@ a,
 
 
 
-.link--strong {
-
+.link--black {
   @extend %strong;
+  border: none;
+
+  @include attention() {
+    color: currentColor;
+  }
 
 }

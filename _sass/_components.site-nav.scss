@@ -4,10 +4,51 @@
 
 .site-nav {
   @extend %clearfix;
-  @include font-size(14px);
+  @include font-size(16px);
+  float: right;
   text-transform: uppercase;
 
+  @include media-query(palm) {
+    @include font-size(24px);
+  }
+
 }
+
+  .site-nav__btn {
+    cursor: pointer;
+    position: absolute;
+    top: $spacing-unit--medium;
+    right: $spacing-unit;
+    z-index: 2000;
+  }
+
+  .site-nav__list {
+
+    @include media-query(palm) {
+      display: none;
+    }
+
+    &.show {
+      display: block;
+
+      .site-nav__item {
+        width: 100%;
+      }
+
+      @include media-query(palm) {
+        background: $color-bg-site-nav;
+        display: table;
+        height: 100vh;
+        left: 0;
+        position: fixed;
+        text-align: center;
+        top: 0;
+        width: 100vw;
+        z-index: 1000;
+      }
+    }
+
+  }
 
   .site-nav__item {
     margin-left: $spacing-unit--extra-small;
@@ -21,25 +62,22 @@
   }
 
     .site-nav__link {
-      display: block;
       color: $color-site-nav;
-
-      &:before {
-        border-bottom-color: $color-site-nav-hover !important;
-      }
+      border-color: transparent;
 
       @include attention() {
         color: $color-site-nav-hover;
       }
 
+      @include media-query(lap-and-up) {
+        display: block;
+      }
+
     }
 
     %site-nav__current {
+      @extend %link__hover;
       color: $color-site-nav-hover;
-
-      &:before {
-        @extend %link__hover;
-      }
     }
 
     @each $page in essays, talks, projects, photos, books, things {

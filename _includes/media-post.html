@@ -1,13 +1,13 @@
 <article class="media  media--post" itemscope itemType="http://schema.org/BlogPosting" itemid="{{ post.url | prepend: site.baseurl }}">
 
-  <a href="{{ post.url | prepend: site.baseurl }}" class="media__img  hide-palm  [ link  link--reset ]">
+  <a href="{{ post.url | prepend: site.baseurl }}" class="media__img  hide-palm">
     <img src="/assets/img/essays/{{ post.slug }}.jpg" itemprop="thumbnail" />
   </a>
 
   <div class="media__body">
     {% include time.html %}
 
-    <h2 class="media__title" itemprop="headline"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+    <h2 class="media__title" itemprop="headline"><a href="{{ post.url | prepend: site.baseurl }}" class="link  link--black">{{ post.title }}</a></h2>
 
     <link href="{{ post.url }}" itemprop="url" />
 

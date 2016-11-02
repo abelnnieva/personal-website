@@ -3,9 +3,9 @@ layout: default
 page-class: page--home
 ---
 
-<div class="region  region--underline">
+<div class="region">
 
-  <figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+  <figure class="region__image-left  u-1-of-1-palm" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
     <img src="/assets/img/abelnieva.jpg" alt="Abel Nieva" itemprop="contentUrl">
   </figure>
 
@@ -22,29 +22,34 @@ page-class: page--home
 
 </div><!-- /region -->
 
-<div class="region  region--underline">
+<div class="[ region  region--underline-t  region--underline-b ]  u-pb0">
 
-  <ul class="layout" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <li class="layout__item  [ u-1-of-1-palm  u-1-of-2-lap  u-1-of-4-desk ]  u-mb">
-      <a href="/ensayos/" class="btn  u-1-of-1-portable" title="Ensayos" itemprop="name">Ensayos</a>
+  <ul class="layout  layout--flush" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <li class="layout__item  [ u-1-of-1-palm  u-1-of-4 ]">
+      <a href="/ensayos/" class="btn  btn--full  btn--clear" title="Ensayos" itemprop="name">Ensayos</a>
     </li><!--
---><li class="layout__item  [ u-1-of-1-palm  u-1-of-2-lap  u-1-of-4-desk ]  u-mb">
-      <a href="/proyectos/" class="btn  u-1-of-1-portable" title="Software" itemprop="name">Software</a>
+--><li class="layout__item  [ u-1-of-1-palm  u-1-of-4 ]">
+      <a href="/proyectos/" class="btn  btn--full  btn--clear" title="Software" itemprop="name">Software</a>
     </li><!--
---><li class="layout__item  [ u-1-of-1-palm  u-1-of-2-lap  u-1-of-4-desk ]  desk-align-r  u-mb">
-      <a href="/fotografias/" class="btn  u-1-of-1-portable" title="Fotografía" itemprop="name">Fotografía</a>
+--><li class="layout__item  [ u-1-of-1-palm  u-1-of-4 ]">
+      <a href="/fotografias/" class="btn  btn--full  btn--clear" title="Fotografía" itemprop="name">Fotografía</a>
     </li><!--
---><li class="layout__item  [ u-1-of-1-palm  u-1-of-2-lap  u-1-of-4-desk ]  desk-align-r  u-mb">
-      <a href="/libros/" class="btn  u-1-of-1-portable" title="Libros" itemprop="name">Libros</a>
+--><li class="layout__item  [ u-1-of-1-palm  u-1-of-4 ]">
+      <a href="/libros/" class="btn  btn--full  btn--clear" title="Libros" itemprop="name">Libros</a>
     </li>
   </ul><!-- /layout -->
+
+</div><!-- /region -->
+
+<div class="region  region--underline-b">
 
   <span>Ver también:</span>
 
   <ul class="list-inline  list-inline--delimited  list-inline--inline" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <li><a href="/resoluciones/" class="link  link--black  link--strong" title="Resoluciones Personales" itemprop="name">Resoluciones Personales</a></li>
-    <li><a href="/viajes/" class="link  link--black  link--strong" title="Historial de Viajes" itemprop="name">Historial de Viajes</a></li>
-    <li><a href="/archivo/" class="link  link--black  link--strong" title="Archivo" itemprop="name">Archivo</a></li>
+    <li><a href="/resoluciones/" class="link  link--black" title="Resoluciones Personales" itemprop="name">Resoluciones Personales</a></li>
+    <li><a href="/cosas/" class="link  link--black" title="Cosas" itemprop="name">Cosas</a></li>
+    <li><a href="/viajes/" class="link  link--black" title="Historial de Viajes" itemprop="name">Historial de Viajes</a></li>
+    <li><a href="/archivo/" class="link  link--black" title="Archivo" itemprop="name">Archivo</a></li>
   </ul><!-- /list-inline -->
 
 </div><!-- /region -->
@@ -63,7 +68,7 @@ page-class: page--home
       <article class="post  post--list" itemprop="item" itemscope itemType="http://schema.org/BlogPosting" itemid="{{ post.url }}">
         {% include time.html %}
 
-        <h5 class="post__title" itemprop="headline"><a href="{{ post.url }}" class="link  link--black" title="{{ post.title }}">{{ post.title }}</a></h5>
+        <h5 class="post__title" itemprop="headline"><a href="{{ post.url }}" title="{{ post.title }}" class="link  link--black">{{ post.title }}</a></h5>
 
         <link href="{{ post.url }}" itemprop="url" />
       </article><!-- /post -->

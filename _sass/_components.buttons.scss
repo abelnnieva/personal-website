@@ -10,15 +10,23 @@ $btn-transition:       0.2s;
   font-weight: $semi-bold;
   text-transform: uppercase;
   letter-spacing: 0.12em;
+  border: none;
 
   @include attention() {
     background-color: $color-btn-hover;
-        border-color: $color-btn-hover;
-
-    &:before {
-      display: none;
-    }
-
+    border: none;
   }
 
+}
+
+
+
+
+.btn--clear {
+  color: $color-btn-clear;
+  background-color: $color-btn-clear-bg;
+
+  @include attention() {
+    background-color: $color-btn-clear-hover-bg;
+  }
 }

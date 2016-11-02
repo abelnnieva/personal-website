@@ -52,9 +52,6 @@ $iconic-size:   64px;
 
 
 
-.icon--cross:before {
-  content: "\ea0f";
-}
 .icon--mail:before {
   content: "\ea84";
 }
@@ -78,4 +75,10 @@ $iconic-size:   64px;
 }
 .icon--linkedin:before {
   content: "\eaca";
+}
+.icon--menu:before {
+  content: "\e9bd";
+}
+.icon--cross:before {
+  content: "\ea0f";
 }

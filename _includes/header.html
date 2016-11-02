@@ -1,12 +1,18 @@
 <header class="page-head" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
   {% if page.title %}
-    <a href="/" class="page-head__title" itemprop="headline">{{ site.title }}</a>
+    <a href="/" class="page-head__link" itemprop="headline">
+      <div class="page-head__title" itemprop="headline">{{ site.title }}</div>
+    </a>
   {% else %}
-    <h1 class="page-head__title" itemprop="headline">{{ site.title }}</h1>
+    <a href="/" class="page-head__link" >
+      <h1 class="page-head__title" itemprop="headline">{{ site.title }}</h1>
+    </a>
   {% endif %}
 
   <nav class="site-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+
+    <div id="js-site-nav-btn" class="site-nav__btn  hide-lap-and-up"><div class="icon  icon--menu"></div></div>
 
     <ul class="site-nav__list  list-inline">
       <li class="site-nav__item"><a href="/ensayos/" class="site-nav__link  site-nav__essays" title="Ensayos" itemprop="name">Ensayos</a></li>
@@ -14,7 +20,6 @@
       <li class="site-nav__item"><a href="/proyectos/" class="site-nav__link  site-nav__projects" title="Software" itemprop="name">Software</a></li>
       <li class="site-nav__item"><a href="/fotografias/" class="site-nav__link  site-nav__photos" title="Fotografía" itemprop="name">Fotografía</a></li>
       <li class="site-nav__item"><a href="/libros/" class="site-nav__link  site-nav__books" title="Libros" itemprop="name">Libros</a></li>
-      <li class="site-nav__item"><a href="/cosas/" class="site-nav__link  site-nav__things" title="Cosas" itemprop="name">Cosas</a></li>
     </ul>
 
   </nav><!-- /site-nav -->

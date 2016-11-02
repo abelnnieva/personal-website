@@ -3,47 +3,35 @@
 \*------------------------------------*/
 
 .page-head {
-  @extend %align-c;
   @extend %hr;
+  @extend %clearfix;
   margin-bottom: $spacing-unit;
-  margin-top: $spacing-unit--large;
+  margin-top: $spacing-unit--medium;
   padding-bottom: $spacing-unit;
 
   @include media-query(desk) {
     margin-bottom: $spacing-unit--medium;
-    margin-top: $spacing-unit--extra-large;
+    margin-top: $spacing-unit--large;
     padding-bottom: $spacing-unit--medium;
   }
 
 }
 
-  a.page-head__title {
-
-    @include attention() {
-      color: $color-page-head;
-
-      &:before {
-        display: none;
-      }
-
-    }
-
+  .page-head__link{
+    @extend %link-reset;
+    display: inline-block;
+    vertical-align: middle;
   }
 
   .page-head__title {
-    @include font-size(38px);
-    color: $color-page-head;
-    display: inline-block;
+    @include font-size($inuit-heading-size-2, 1);
+    font-family: $secondary-family;
     font-weight: $normal;
-    margin-bottom: $spacing-unit--extra-small;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.1em;
+    margin-bottom: 0;
     text-transform: uppercase;
 
-    @include media-query(lap-and-up) {
-      @include font-size(52px);
-    }
-
     @include media-query(desk) {
-      margin-bottom: $spacing-unit--small;
+      @include font-size($inuit-heading-size-1, 1);
     }
   }

@@ -12,13 +12,17 @@ AN = (function ($) {
     email: $('#js-email'),
     links: $('a'),
     gallery: $('#js-gallery'),
-    galleryBtn: $('#js-gallery').find('li')
+    galleryBtn: $('#js-gallery').find('li'),
+    siteNavBtn: $('#js-site-nav-btn'),
+    siteNavIcon: $('#js-site-nav-btn').find('.icon'),
+    siteNavList: $('.site-nav__list')
   };
 
   function init() {
     buildEmail();
     linksWithTargetBlank();
     gallery();
+    siteNavBtn();
   }
 
   function buildEmail() {
@@ -57,8 +61,16 @@ AN = (function ($) {
   }
 
   function getLightbox(value) {
-    return '<div id="js-lightbox" style="display:none;" class="lightbox"><button class="lightbox__btn" onclick="AN.onClickLightboxBtn()">' + 
+    return '<div id="js-lightbox" style="display:none;" class="lightbox"><button class="lightbox__btn" onclick="AN.onClickLightboxBtn()">' +
       '<span class="icon  icon--cross"></span></button><div class="lightbox__item"><img src="' + value + '"/></div></div>';
+  }
+
+  function siteNavBtn() {
+    dom.siteNavBtn.click(function onClickSiteNavBtn(event) {
+      dom.siteNavIcon.toggleClass('icon--cross');
+      dom.siteNavList.toggleClass('show');
+      $('html').toggleClass('overflowHidden');
+    });
   }
 
   _api.onClickLightboxBtn = function(value) {

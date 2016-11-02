@@ -125,9 +125,12 @@ $inuit-heading-size-6: 16px;
 $inuit-btn-background:      $color-btn;
 $inuit-btn-radius:          $base-round;
 $inuit-btn-border-width:    2px;
+$inuit-enable-btn--full:    true;
 @import "../bower_components/inuit-buttons/objects.buttons";
 
+$inuit-enable-layout--flush:            true;
 @import "../bower_components/inuit-layout/objects.layout";
+
 @import "../bower_components/inuit-block/objects.block";
 
 $inuit-enable-list-inline--delimited:   true;
@@ -174,6 +177,7 @@ $inuit-enable-margins--large:     true;
 $inuit-enable-margins--huge:      true;
 $inuit-enable-margins--negative:  true;
 $inuit-enable-margins--none:      true;
+$inuit-enable-paddings--none:     true;
 @import "../bower_components/inuit-spacing/trumps.spacing";
 
 @import "trumps.show-hide";

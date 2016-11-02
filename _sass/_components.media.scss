@@ -10,6 +10,7 @@
   }
 
   .media__img {
+    @extend %link-reset;
     max-width: 225px;
     margin-top: $spacing-unit;
 

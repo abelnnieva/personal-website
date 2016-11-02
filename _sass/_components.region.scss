@@ -20,10 +20,17 @@
 
   }
 
+  .region__image-left {
+    float: left;
+    margin-right: $spacing-unit;
+    width: 378px;
+    vertical-align: middle;
+  }
 
 
 
-.region--underline {
+
+.region--underline-b {
   @extend %hr;
   padding-bottom: $spacing-unit;
 
@@ -31,4 +38,11 @@
     padding-bottom: $spacing-unit--medium;
   }
 
+}
+
+
+
+
+.region--underline-t {
+  @extend %hr--top;
 }
