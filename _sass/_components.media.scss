@@ -24,6 +24,7 @@
   .media__title {
     @include font-size($inuit-heading-size-4, 1);
     margin-bottom: $spacing-unit--extra-small;
+    margin-top: $spacing-unit--extra-small;
 
     @include media-query(desk) {
       @include font-size($inuit-heading-size-2, 1);
@@ -60,10 +61,6 @@
 
     }
 
-  }
-
-  .media__meta {
-    @include font-size(16px);
   }
 
 

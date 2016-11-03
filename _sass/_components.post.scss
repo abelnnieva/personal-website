@@ -32,7 +32,6 @@
 
   .post__date {
     color: $color-post-date;
-    display: block;
   }
 
   .post__cover {
@@ -80,6 +79,7 @@
 
   .post__title {
     margin-bottom: 0;
+    font-weight: $bold;
 
     @include media-query(lap-and-up) {
       display: inline;
@@ -92,7 +92,6 @@
 
     @include media-query(lap-and-up) {
       margin-right: $spacing-unit--small;
-      display: inline-block;
     }
 
   }

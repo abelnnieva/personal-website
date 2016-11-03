@@ -4,9 +4,7 @@
 
 .site-nav {
   @extend %clearfix;
-  @include font-size(16px);
   float: right;
-  text-transform: uppercase;
 
   @include media-query(palm) {
     @include font-size(24px);
@@ -62,8 +60,11 @@
   }
 
     .site-nav__link {
+      @extend %link-clear;
+      @include font-size(16px);
+      text-transform: uppercase;
+      letter-spacing: 1px;
       color: $color-site-nav;
-      border-color: transparent;
 
       @include attention() {
         color: $color-site-nav-hover;

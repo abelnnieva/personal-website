@@ -4,69 +4,83 @@ layout: default
 
 {% assign type = page.page-class %}
 
-<article class="post  {% if type == 'page--books' %}post--book{% endif %}" itemscope itemType="http://schema.org/BlogPosting">
+<div class="layout">
 
-  {% if type == 'page--essays' %}
-  <img src="/assets/img/essays/{{ page.slug }}.jpg" class="post__cover" itemprop="image">
-  {% endif %}
+  <article class="layout__item  [ u-1-of-1-palm  u-4-of-5 ]  post  {% if type == 'page--books' %}post--book{% endif %}"
+    itemscope itemType="http://schema.org/BlogPosting">
 
-  {% assign m = page.date | date: "%-m" %}
+    {% if type == 'page--essays' %}
+    <img src="/assets/img/essays/{{ page.slug }}.jpg" class="post__cover" itemprop="image">
+    {% endif %}
 
-  <time class="post__date" datetime="{{ page.date | date_to_xmlschema  }}" itemprop="datePublished">
-    {% case m %}
-      {% when '1' %}Enero
-      {% when '2' %}Febrero
-      {% when '3' %}Marzo
-      {% when '4' %}Abril
-      {% when '5' %}Mayo
-      {% when '6' %}Junio
-      {% when '7' %}Julio
-      {% when '8' %}Agosto
-      {% when '9' %}Septiembre
-      {% when '10' %}Octubre
-      {% when '11' %}Noviembre
-      {% when '12' %}Diciembre
-    {% endcase %}
-    {{ page.date | date: "%-d, " }}
-    {{ page.date | date: "%Y" }}
-  </time>
+    <div>
 
-  <h1 class="post__title" itemprop="headline">{{ page.title }}</h1>
+      {% assign m = page.date | date: "%-m" %}
 
-  {% if type == 'page--books' %}
-  <figure class="post__cover" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-    <img src="/assets/img/books/{{ page.slug }}.jpg" itemprop="contentUrl">>
-    <figcaption itemprop="caption">{{ page.book-data }}</figcaption>
-  </figure>
-  {% endif %}
-
-  {{ content }}
-
-  <small class="media  media--autor" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img src="/assets/img/abelnieva.avatar.jpg" alt="" class="media__img" itemprop="image" />
-    <div class="media__body">
-      <h6 class="media__title" itemprop="name">Abel Nieva</h6>
-      <p itemprop="description">Desarrollador de software en <a href="http://www.gft.com/es/" target="_blank">GFT España</a>, fotógrafo urbano,
-      emprendedor apasionado, adicto al conocimiento, ensayista, enfocado en el estudio y exposición de la Biblia,
-      estudiante de una Maestría en Predicación Expositíva en el <a href="https://tmai.org/" target="_blank">TMAI</a>.</p>
-    </div>
-  </small><!-- /media -->
-
-  {% if type == 'page--essays' %}
-  <div class="post__meta">
-    <span>En </span>
-    <ul class="list-inline  list-inline--delimited  list-inline--inline" itemprop="keywords" itemscope itemtype="http://schema.org/ItemList">
-    {% for category in page.categories %}
-      <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-        <a href="/ensayos/{{ category }}/" itemprop="item">
-        {% case category %}
-          {% when 'memorias' %}Memorias
+      <time class="post__date" datetime="{{ page.date | date_to_xmlschema  }}" itemprop="datePublished">
+        {% case m %}
+          {% when '1' %}Enero
+          {% when '2' %}Febrero
+          {% when '3' %}Marzo
+          {% when '4' %}Abril
+          {% when '5' %}Mayo
+          {% when '6' %}Junio
+          {% when '7' %}Julio
+          {% when '8' %}Agosto
+          {% when '9' %}Septiembre
+          {% when '10' %}Octubre
+          {% when '11' %}Noviembre
+          {% when '12' %}Diciembre
         {% endcase %}
-        </a>
-      </li>
-    {% endfor %}
-    </ul><!-- /list-inline -->
-  </div>
-  {% endif %}
+        {{ page.date | date: "%-d, " }}
+        {{ page.date | date: "%Y" }}
+      </time>
 
-</article><!-- /post -->
+      {% if type == 'page--essays' %}
+        <ul class="list-inline  list-inline--inline" itemprop="keywords" itemscope itemtype="http://schema.org/ItemList">
+        {% for category in page.categories %}
+          <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/ensayos/{{ category }}/" class="tag" itemprop="item">
+            {% case category %}
+              {% when 'memorias' %}Memorias
+            {% endcase %}
+            </a>
+          </li>
+        {% endfor %}
+        </ul><!-- /list-inline -->
+      {% endif %}
+    
+    </div>
+
+    <h1 class="post__title" itemprop="headline">{{ page.title }}</h1>
+
+    {% if type == 'page--books' %}
+    <figure class="post__cover" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+      <img src="/assets/img/books/{{ page.slug }}.jpg" itemprop="contentUrl">>
+      <figcaption itemprop="caption">{{ page.book-data }}</figcaption>
+    </figure>
+    {% endif %}
+
+    {{ content }}
+
+    <small class="media  media--autor" itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <img src="/assets/img/abelnieva.avatar.jpg" alt="" class="media__img" itemprop="image" />
+      <div class="media__body">
+        <h6 class="media__title" itemprop="name">Abel Nieva</h6>
+        <p itemprop="description">Desarrollador de software en <a href="http://www.gft.com/es/" target="_blank">GFT España</a>, fotógrafo urbano,
+        emprendedor apasionado, adicto al conocimiento, ensayista, enfocado en el estudio y exposición de la Biblia,
+        estudiante de una Maestría en Predicación Expositíva en el <a href="https://tmai.org/" target="_blank">TMAI</a>.</p>
+      </div>
+    </small><!-- /media -->
+
+  </article><!--
+
+  --><aside class="layout__item  [ u-1-of-1-palm  u-1-of-5 ]" role="complementary">
+
+    <ul class="list-bare  [ list  list--category ]" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+      <li><a href="/ensayos/memorias/" class="link  link--clear" title="Memorias" itemprop="name">Memorias</a></li>
+    </ul><!-- /list-inline -->
+
+  </aside>
+
+</div><!-- /layout -->

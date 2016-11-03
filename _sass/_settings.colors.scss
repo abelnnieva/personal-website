@@ -52,7 +52,7 @@ $color-iconic:            $color-gray-light;
 
 // Buttons
 $color-btn:                   $color-brand;
-$color-btn-hover:             darken($color-btn, 10%);
+$color-btn-hover:             darken($color-btn, 5%);
 $color-btn-clear:             $color-text;
 $color-btn-clear-bg:          $color-white;
 $color-btn-clear-hover-bg:    $color-btn;
@@ -99,3 +99,11 @@ $color-bg-lightbox:             $color-black;
 
 // Region
 $color-region-title-border:     $color-black;
+
+
+
+
+// Tag
+$color-tag:               $color-white;
+$color-tag-bg:            $color-brand;
+$color-tag-bg-hover:      darken($color-tag-bg, 5%);

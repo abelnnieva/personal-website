@@ -6,7 +6,7 @@
 $link-transition:       0.2s;
 
 %link__hover {
-  border-bottom: 1px solid currentColor;
+  border-bottom: 1px solid currentColor!important;
 }
 
 a,
@@ -39,7 +39,7 @@ a,
   color: inherit;
 
   @include attention() {
-    border: none;
+    border: none!important;
     color: inherit;
   }
 
@@ -65,12 +65,19 @@ a,
 
 
 
-.link--black {
-  @extend %strong;
-  border: none;
+.link--clear,
+%link-clear {
+  border: 1px solid transparent;
 
   @include attention() {
     color: currentColor;
   }
+}
 
+
+
+
+.link--black {
+  @extend %link-clear;
+  @extend %strong;
 }

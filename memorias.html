@@ -6,14 +6,26 @@ page-class: page--essays
 permalink: /ensayos/memorias/
 ---
 
-<ul class="align-c  u-mb+  [ list-inline  list-inline--delimited ]" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-  <li><a href="/ensayos/memorias/" class="link  link--active  link--black" title="Memorias" itemprop="name">Memorias</a></li>
-</ul><!-- /list-inline -->
+<div class="layout">
 
-{% for post in site.posts %}
-  {% if post.categories contains 'memorias' %}
+  <div class="layout__item  [ u-1-of-1-palm  u-4-of-5 ]">
 
-    {% include media-post.html %}
+  {% for post in site.posts %}
+    {% if post.categories contains 'memorias' %}
 
-  {% endif %}
-{% endfor %}
+      {% include media-post.html %}
+
+    {% endif %}
+  {% endfor %}
+
+  </div><!--
+
+  --><aside class="layout__item  [ u-1-of-1-palm  u-1-of-5 ]" role="complementary">
+
+    <ul class="list-bare  [ list  list--category ]" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+      <li><a href="/ensayos/memorias/" class="link  link--clear  link--active" title="Memorias" itemprop="name">Memorias</a></li>
+    </ul><!-- /list-inline -->
+
+  </aside>
+
+</div><!-- /layout -->

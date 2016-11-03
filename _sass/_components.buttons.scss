@@ -14,7 +14,7 @@ $btn-transition:       0.2s;
 
   @include attention() {
     background-color: $color-btn-hover;
-    border: none;
+    border: none!important;
   }
 
 }

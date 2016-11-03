@@ -5,21 +5,16 @@
   </a>
 
   <div class="media__body">
-    {% include time.html %}
 
-    <h2 class="media__title" itemprop="headline"><a href="{{ post.url | prepend: site.baseurl }}" class="link  link--black">{{ post.title }}</a></h2>
+    <div>
 
-    <link href="{{ post.url }}" itemprop="url" />
+      {% include time.html %}
 
-    <p itemprop="description">{{ post.excerpt | remove: '<p>' | remove: '</p>' }} [...]</p>
 
-    <div class="media__meta">
-      <span>En </span>
-
-      <ul class="list-inline  list-inline--delimited  list-inline--inline" itemprop="keywords" itemscope itemtype="http://schema.org/ItemList">
+      <ul class="list-inline  list-inline--inline" itemprop="keywords" itemscope itemtype="http://schema.org/ItemList">
       {% for category in post.categories %}
         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-          <a href="/ensayos/{{ category }}/" itemprop="item">
+          <a href="/ensayos/{{ category }}/" class="tag" itemprop="item">
           {% case category %}
             {% when 'memorias' %}Memorias
           {% endcase %}
@@ -27,7 +22,15 @@
         </li>
       {% endfor %}
       </ul><!-- /list-inline -->
+
     </div>
+
+    <h2 class="media__title" itemprop="headline"><a href="{{ post.url | prepend: site.baseurl }}" class="link  link--clear">{{ post.title }}</a></h2>
+
+    <link href="{{ post.url }}" itemprop="url" />
+
+    <p itemprop="description">{{ post.excerpt | remove: '<p>' | remove: '</p>' }} [...]</p>
+
   </div>
 
 </article><!-- /media -->
