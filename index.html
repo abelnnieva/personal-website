@@ -45,10 +45,13 @@ page-class: page--home
 
   <span>Ver también:</span>
 
-  <ul class="list-inline  list-inline--delimited  list-inline--inline" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <li><a href="/resoluciones/" class="link  link--black" title="Resoluciones Personales" itemprop="name">Resoluciones Personales</a></li>
+  <ul class="list-inline  list-inline--delimited  list-inline--inline" role="navigation" itemscope
+    itemtype="http://schema.org/SiteNavigationElement">
+    <li><a href="/resoluciones/" class="link  link--black" title="Resoluciones Personales" itemprop="name">Resoluciones
+      Personales</a></li>
     <li><a href="/cosas/" class="link  link--black" title="Cosas" itemprop="name">Cosas</a></li>
-    <li><a href="/viajes/" class="link  link--black" title="Historial de Viajes" itemprop="name">Historial de Viajes</a></li>
+    <li><a href="/viajes/" class="link  link--black" title="Historial de Viajes" itemprop="name">Historial de
+      Viajes</a></li>
     <li><a href="/archivo/" class="link  link--black" title="Archivo" itemprop="name">Archivo</a></li>
   </ul><!-- /list-inline -->
 
@@ -56,7 +59,8 @@ page-class: page--home
 
 <section class="region  u-mb++" itemscope itemtype="http://schema.org/ItemList">
 
-  <h2 class="region__title" itemprop="name">Artículos Recientes <a href="/ensayos/" title="Ver todos los ensayos">Ver todos</a></h2>
+  <h2 class="region__title" itemprop="name">Artículos Recientes <a href="/ensayos/" title="Ver todos los ensayos">
+    Ver todos</a></h2>
 
   <link href="/ensayos/" itemprop="url" />
 
@@ -65,10 +69,12 @@ page-class: page--home
     {% unless post.categories contains 'books' or post.categories contains 'talks' %}
     <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 
-      <article class="post  post--list" itemprop="item" itemscope itemType="http://schema.org/BlogPosting" itemid="{{ post.url }}">
+      <article class="post  post--list" itemprop="item" itemscope itemType="http://schema.org/BlogPosting"
+        itemid="{{ post.url }}">
         {% include time.html %}
 
-        <h5 class="post__title" itemprop="headline"><a href="{{ post.url }}" title="{{ post.title }}" class="link  link--black">{{ post.title }}</a></h5>
+        <h4 class="post__title" itemprop="headline"><a href="{{ post.url }}" title="{{ post.title }}"
+          class="link  link--black">{{ post.title }}</a></h4>
 
         <link href="{{ post.url }}" itemprop="url" />
       </article><!-- /post -->

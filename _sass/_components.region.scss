@@ -22,9 +22,14 @@
 
   .region__image-left {
     float: left;
+    margin-bottom: $spacing-unit;
     margin-right: $spacing-unit;
-    width: 378px;
     vertical-align: middle;
+    width: 378px;
+
+    @include media-query(lap-and-up) {
+      margin-bottom: $spacing-unit--small;
+    }
   }
 
 
