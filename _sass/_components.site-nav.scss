@@ -12,6 +12,11 @@
 
 }
 
+  .site-nav__ornament {
+    position: absolute;
+    bottom: $spacing-unit;
+  }
+
   .site-nav__btn {
     cursor: pointer;
     position: absolute;
@@ -24,6 +29,14 @@
 
     @include media-query(palm) {
       display: none;
+
+      &:after {
+        content: '✨ 🌝 🌚 ✨';
+        position: absolute;
+        bottom: $spacing-unit;
+        left: 0;
+        right: 0;
+      }
     }
 
     &.show {
@@ -34,8 +47,8 @@
       }
 
       @include media-query(palm) {
+        padding: $spacing-unit--extra-large 0;
         background: $color-bg-site-nav;
-        display: table;
         height: 100vh;
         left: 0;
         position: fixed;
@@ -49,8 +62,15 @@
   }
 
   .site-nav__item {
-    margin-left: $spacing-unit--extra-small;
-    margin-right: $spacing-unit--extra-small;
+
+    @include media-query(palm) {
+      margin-bottom: $spacing-unit;
+    }
+
+    @include media-query(lap-and-up) {
+      margin-left: $spacing-unit--extra-small;
+      margin-right: $spacing-unit--extra-small;
+    }
 
     @include media-query(desk) {
       margin-left: $spacing-unit--small;
@@ -68,6 +88,10 @@
 
       @include attention() {
         color: $color-site-nav-hover;
+      }
+
+      @include media-query(palm) {
+        @include font-size($inuit-heading-size-2);
       }
 
       @include media-query(lap-and-up) {

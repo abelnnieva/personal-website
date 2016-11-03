@@ -71,6 +71,12 @@ AN = (function ($) {
       dom.siteNavList.toggleClass('show');
       $('html').toggleClass('overflowHidden');
     });
+
+    $('html, body').on('touchmove', function(event) {
+      if($('html').hasClass('overflowHidden')) {
+        event.preventDefault(); 
+      }
+    });
   }
 
   _api.onClickLightboxBtn = function(value) {
