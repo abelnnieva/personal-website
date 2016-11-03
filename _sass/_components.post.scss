@@ -11,6 +11,8 @@
 }
 
   h1.post__title {
+    margin-top: $spacing-unit--extra-small;
+
     @include media-query(portable) {
       @include font-size($inuit-heading-size-2);
     }
