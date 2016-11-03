@@ -33,6 +33,12 @@ h3 {
   }
 }
 
+h4 {
+  @include media-query(palm) {
+    @include font-size($inuit-heading-size-5);
+  }
+}
+
 
 
 
