@@ -46,7 +46,7 @@ layout: default
         {% endfor %}
         </ul><!-- /list-inline -->
       {% endif %}
-    
+
     </div>
 
     <h1 class="post__title" itemprop="headline">{{ page.title }}</h1>
@@ -64,9 +64,10 @@ layout: default
       <img src="/assets/img/abelnieva.avatar.jpg" alt="" class="media__img" itemprop="image" />
       <div class="media__body">
         <h6 class="media__title" itemprop="name">Abel Nieva</h6>
-        <p itemprop="description">Desarrollador de software en <a href="http://www.gft.com/es/" target="_blank">GFT España</a>, fotógrafo urbano,
-        adicto al conocimiento, emprendedor, ensayista, enfocado en el estudio y exposición de la Biblia,
-        estudiante de una Maestría en Predicación Expositíva en el <a href="https://tmai.org/" target="_blank">TMAI</a>.</p>
+        <p itemprop="description">Desarrollador de software en <a href="http://www.gft.com/es/" target="_blank">GFT
+          España</a>, fotógrafo urbano, adicto al conocimiento, emprendedor, ensayista, enfocado en el estudio y
+          exposición de la Biblia, estudiante de una Maestría en Predicación Expositíva en el <a href="https://tmai.org/"
+          target="_blank">TMAI</a>.</p>
       </div>
     </small><!-- /media -->
 
@@ -74,7 +75,8 @@ layout: default
 
   --><aside class="layout__item  [ u-1-of-1-palm  u-1-of-5 ]  page-aside" role="complementary">
 
-    <ul class="list-bare  [ list  list--category ]" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <ul class="list-bare  [ list  list--category ]" role="navigation" itemscope
+      itemtype="http://schema.org/SiteNavigationElement">
       {% for category in site.essays_categories %}
         <li><a href="/ensayos/{{ category | replace: 'á', 'a' | replace: 'é', 'a' | replace: 'í', 'i' | replace: 'ó', 'o' | replace: 'ú', 'u' }}/"
           class="link  link--clear" title="{{ category | capitalize }}" itemprop="name">{{ category | capitalize }}</a></li>
