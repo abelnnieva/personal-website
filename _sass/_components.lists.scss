@@ -23,7 +23,7 @@
 
 .list--category {
   @extend %hr--left;
-  @include font-size(16px);
+  @include font-size(14px);
   text-transform: uppercase;
   letter-spacing: 1px;
   padding-left: $spacing-unit;

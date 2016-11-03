@@ -19,15 +19,16 @@ permalink: /ensayos/
     {% endfor %}
 
   </div><!--
-
+ 
   --><aside class="layout__item  [ u-1-of-1-palm  u-1-of-5 ]  page-aside" role="complementary">
 
     <ul class="list-bare  [ list  list--category ]" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-      <li><a href="/ensayos/memorias/" class="link  link--clear" title="Memorias" itemprop="name">Memorias</a></li>
+      {% for category in site.essays_categories %}
+        <li><a href="/ensayos/{{ category | replace: 'á', 'a' | replace: 'é', 'a' | replace: 'í', 'i' | replace: 'ó', 'o' | replace: 'ú', 'u' }}/"
+          class="link  link--clear" title="{{ category | capitalize }}" itemprop="name">{{ category | capitalize }}</a></li>
+      {% endfor %}
     </ul><!-- /list-inline -->
 
   </aside>
 
 </div><!-- /layout -->
-
-

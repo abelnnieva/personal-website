@@ -26,12 +26,11 @@
   }
 
   .media__title {
-    @include font-size($inuit-heading-size-3, 1);
+    @include font-size($inuit-heading-size-3, 1.8rem);
     margin-bottom: $spacing-unit--extra-small;
-    margin-top: $spacing-unit--extra-small;
 
     @include media-query(desk) {
-      @include font-size($inuit-heading-size-2, 1);
+      @include font-size($inuit-heading-size-2, 1.8rem);
       margin-bottom: $spacing-unit--small;
     }
 
