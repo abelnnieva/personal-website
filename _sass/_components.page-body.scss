@@ -3,7 +3,9 @@
 \*------------------------------------*/
 
 .page-body {
-
+  @include media-query(palm) {
+    padding-top: 77px;
+  }
 }
 
   .page-body__title {

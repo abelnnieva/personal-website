@@ -7,7 +7,21 @@
   @extend %clearfix;
   margin-bottom: $spacing-unit;
   margin-top: $spacing-unit--medium;
-  padding-bottom: $spacing-unit;
+
+  @include media-query(palm) {
+    background: $color-bg-page-head;
+    left: 0;
+    margin: 0;
+    padding: $spacing-unit--small;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1000;
+  }
+
+  @include media-query(lap-and-up) {
+    padding-bottom: $spacing-unit;
+  }
 
   @include media-query(desk) {
     margin-bottom: $spacing-unit--medium;
