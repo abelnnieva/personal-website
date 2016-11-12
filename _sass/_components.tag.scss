@@ -12,6 +12,7 @@
   background: $color-tag-bg;
   padding: 0 6px;
   color: $color-tag;
+  font-weight: $normal;
 
   @include attention() {
     color: $color-tag;

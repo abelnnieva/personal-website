@@ -27,7 +27,8 @@
 
     <link href="{{ post.url }}" itemprop="url" />
 
-    <p itemprop="description">{{ post.excerpt | remove: '<p>' | remove: '</p>' }} [...]</p>
+    <p itemprop="description">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}
+      <a href="{{ post.url }}">Leer más &raquo;</a></p>
 
   </div>
 
