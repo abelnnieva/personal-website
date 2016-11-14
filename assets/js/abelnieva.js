@@ -1,7 +1,7 @@
 /**
  * abelnieva - The source code of personal website based on Jekyll.
  * @version v0.0.1
- * @link    http://abelnieva.com
+ * @link    https://abelnieva.com
  * @author  Abel Nieva <abel@abelnieva.com>
  * @license ISC
  */
