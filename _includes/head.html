@@ -18,7 +18,14 @@
   <link rel="stylesheet" href="{{ '/assets/css/abelnieva.css' | prepend: site.baseurl }}">
 
   <!-- Meta-Tagging -->
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  {% if page.meta %}
+    {% assign headDescription = page.meta | strip_html | strip_newlines | truncate: 160 %}
+  {% elsif page.excerpt %}
+    {% assign headDescription = page.excerpt | strip_html | strip_newlines | truncate: 160 %}
+  {% else %}
+    {% assign headDescription = site.description %}
+  {% endif %}
+  <meta name="description" content="{{ headDescription }}">
   <meta name="robots" content="index, follow">
 
   <link rel="shortcut icon" href="{{ '/favicon.ico' | prepend: site.baseurl }}">
@@ -41,10 +48,14 @@
       {% if page.slug %}
         {% assign twitterImage = '.jpg' | prepend: page.slug | prepend: '/assets/img/essays/' | prepend: site.url %}
       {% endif %}
+    {% when 'page--books' %}
+      {% if page.slug %}
+        {% assign twitterImage = '.jpg' | prepend: page.slug | prepend: '/assets/img/books/' | prepend: site.url %}
+      {% endif %}
   {% endcase %}
 
   <meta name="twitter:image" content="{{ twitterImage }}">
-  <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="twitter:description" content="{{ headDescription }}">
 
   {% if page.url == "/404.html" %}<meta http-equiv="refresh" content="5; url=/">{% endif %}
 

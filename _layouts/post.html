@@ -53,7 +53,7 @@ layout: default
 
     {% if type == 'page--books' %}
     <figure class="post__cover" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-      <img src="/assets/img/books/{{ page.slug }}.jpg" itemprop="contentUrl">>
+      <img src="/assets/img/books/{{ page.slug }}.jpg" itemprop="contentUrl">
       <figcaption itemprop="caption">{{ page.book-data }}</figcaption>
     </figure>
     {% endif %}
@@ -73,7 +73,7 @@ layout: default
 
   </article><!--
 
-  --><aside class="layout__item  [ u-1-of-1-palm  u-1-of-5 ]  page-aside" role="complementary">
+  -->{% if type == 'page--essays' %}<aside class="layout__item  [ u-1-of-1-palm  u-1-of-5 ]  page-aside" role="complementary">
 
     <ul class="list-bare  [ list  list--category ]" role="navigation" itemscope
       itemtype="http://schema.org/SiteNavigationElement">
@@ -83,6 +83,6 @@ layout: default
       {% endfor %}
     </ul><!-- /list-inline -->
 
-  </aside>
+  </aside>{% endif %}
 
 </div><!-- /layout -->

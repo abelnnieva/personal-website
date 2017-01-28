@@ -108,7 +108,8 @@ figure {
  */
 hr,
 %hr {
-    border-bottom: 1px solid $color-hr;
+  border: 0;
+  border-bottom: 1px solid $color-hr;
 }
 
   %hr--top {

@@ -3,19 +3,19 @@
 \*------------------------------------*/
 
 // Internal variables
-$block-book-img-height:     200px;
+$block-book-img-height:     250px;
 
 .block--book {
 
   .block__img {
     @extend %align-c;
     max-height: $block-book-img-height;
-    padding: $spacing-unit--extra-small 0;
+    padding: $spacing-unit--small 0;
     background-color: $color-block-book-img;
     box-sizing: content-box;
 
     @include media-query(desk) {
-      padding: $spacing-unit--small 0;
+      padding: $spacing-unit 0;
       margin-bottom: $spacing-unit--extra-small;
     }
 

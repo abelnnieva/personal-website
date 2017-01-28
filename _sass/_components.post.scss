@@ -60,13 +60,22 @@
 .post--book {
 
   .post__cover {
-    display: inline;
-    float: right;
-    max-width: 275px;
-    margin-left: $spacing-unit--medium;
+
+    @include media-query(lap-and-up) {
+      display: inline;
+      float: right;
+      margin: 0 0 $spacing-unit--medium $spacing-unit--medium;
+      max-width: 300px;
+    }
 
     @include media-query(desk) {
-      margin-left: $spacing-unit--large;
+      margin: 0 0 $spacing-unit--large $spacing-unit--large;
+    }
+
+    figcaption {
+      @extend %strong;
+      margin-top: $spacing-unit--small;
+      line-height: 1.6;
     }
 
   }
