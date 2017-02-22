@@ -1,14 +1,29 @@
 ---
 layout: page
-title: Libros
-title_hide: true
+title: Reseñas de Libros
 page-class: page--books
 permalink: /libros/
 ---
 
-<div class="region  u-mt++  u-mb++  align-c">
-    <p itemprop="description">Todavía no hay contenido en esta sección, <br>
-      pero en breve encontrará material interesante.</p>
+<ul class="layout">
+  {% for post in site.posts %}{% if post.categories contains 'books' %}
+    <li class="layout__item  [ u-1-of-1-palm  u-1-of-2-lap  u-1-of-3-desk ]  u-mb">
+      <a href="{{ post.url }}" class="link  link--reset">
 
-    <br>
-</div><!-- /region -->
+        <article class="block  block--book" itemscope itemType="http://schema.org/BlogPosting">
+          <div class="block__img">
+            <img src="/assets/img/books/{{ post.slug }}.jpg" itemprop="thumbnail">
+          </div>
+          <div class="block__body">
+
+            {% include time.html %}
+
+            <h4 class="block__title" itemprop="headline">{{ post.title }}</h4>
+            <p itemprop="description">{{ post.meta }}</p>
+          </div>
+        </article>
+
+      </a>
+    </li>
+  {% endif %}{% endfor %}
+</ul>

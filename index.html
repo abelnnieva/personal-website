@@ -49,7 +49,6 @@ page-class: page--home
     itemtype="http://schema.org/SiteNavigationElement">
     <li><a href="/resoluciones/" class="link  link--black" title="Resoluciones Personales" itemprop="name">Resoluciones
       Personales</a></li>
-    <li><a href="/cosas/" class="link  link--black" title="Cosas" itemprop="name">Cosas</a></li>
     <li><a href="/viajes/" class="link  link--black" title="Historial de Viajes" itemprop="name">Historial de
       Viajes</a></li>
     <li><a href="/archivo/" class="link  link--black" title="Archivo" itemprop="name">Archivo</a></li>
@@ -85,5 +84,37 @@ page-class: page--home
   </ul><!-- /list -->
 
 </section><!-- /region -->
+
+<article class="region  u-mb++">
+
+  <h2 class="region__title">Reseñas de Libros <a href="/libros/">Ver todos</a></h2>
+
+  <ul class="layout">
+    {% for post in site.posts limit:4 %}{% if post.categories contains 'books' %}
+      <li class="layout__item  [ u-1-of-1-palm  u-1-of-2-lap  u-1-of-3 ]  u-mb">
+        <a href="{{ post.url }}" class="link  link--reset">
+
+          <div class="block  block--book">
+
+            <div class="block__img">
+              <img src="/assets/img/books/{{ post.slug }}.jpg"/>
+            </div>
+
+            <div class="block__body">
+              {% include time.html %}
+
+              <h4 class="block__title">{{ post.title }}</h4>
+
+              <p>{{ post.meta }}</p>
+            </div>
+
+          </div><!-- /block -->
+
+        </a>
+      </li>
+    {% endif %}{% endfor %}
+  </ul>
+
+</article><!-- /region -->
 
 <div class="align-c">✨ 🌝 🌚 ✨</div>
