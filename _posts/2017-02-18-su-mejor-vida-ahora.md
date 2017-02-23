@@ -2,7 +2,7 @@
 title: "Su mejor vida no es ahora"
 date: 2017-02-18
 categories: "books"
-meta: "Los libros de un autores malos o pésimos no suelen llegar a mis manos, pero ocasionalmente algunos libros lo consiguen."
+meta: "Los libros de autores malos o pésimos no suelen llegar a mis manos, pero ocasionalmente algunos libros lo consiguen."
 page-class: page--books
 book-data: "Joel Osten, Su mejor vida ahora (Lake Mary, Florida: Casa Creación, 2005). ISBN 978-1591854807. 295 páginas. 9,68 EUR."
 permalink: /libros/:title/
