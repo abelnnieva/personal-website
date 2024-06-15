@@ -2,7 +2,7 @@
   itemid="{{ post.url | prepend: site.baseurl }}">
 
   <a href="{{ post.url | prepend: site.baseurl }}" class="media__img">
-    <img src="/assets/img/essays/{{ post.slug }}.jpg" itemprop="thumbnail" />
+    <img src="{{ '/assets/img/essays/' | append: post.slug | prepend: site.baseurl }}.jpg" itemprop="thumbnail" />
   </a>
 
   <div class="media__body">
@@ -14,7 +14,7 @@
       <ul class="list-inline  list-inline--inline" itemprop="keywords" itemscope itemtype="http://schema.org/ItemList">
       {% for category in post.categories %}
         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-          <a href="/ensayos/{{ category | replace: 'á', 'a' | replace: 'é', 'a' | replace: 'í', 'i' | replace: 'ó', 'o' | replace: 'ú', 'u' }}/"
+          <a href="{{ site.baseurl }}/ensayos/{{ category | replace: 'á', 'a' | replace: 'é', 'a' | replace: 'í', 'i' | replace: 'ó', 'o' | replace: 'ú', 'u' }}/"
             class="tag" itemprop="item">{{ category | capitalize }}</a>
         </li>
       {% endfor %}
@@ -25,10 +25,10 @@
     <h2 class="media__title" itemprop="headline"><a href="{{ post.url | prepend: site.baseurl }}" class="link
       link--clear">{{ post.title }}</a></h2>
 
-    <link href="{{ post.url }}" itemprop="url" />
+    <link href="{{ post.url | prepend: site.baseurl }}" itemprop="url" />
 
     <p itemprop="description">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}
-      <a href="{{ post.url }}">Leer más &raquo;</a></p>
+      <a href="{{ post.url | prepend: site.baseurl }}">Leer más &raquo;</a></p>
 
   </div>
 

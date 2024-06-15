@@ -10,14 +10,14 @@ Según me cuenta mi madre, empecé a andar a los diez meses de edad cuando estab
 Está claro que me lancé a caminar por mí mismo, no obstante, durante la práctica recibí la inestimable ayuda de mis padres. Su apoyo me permitió ganar fuerza, habilidad, equilibrio, y una postura adecuada. No pude caminar correctamente hasta que mis piernas estuvieron firmes, y la musculatura de mi espalda completamente fortalecida. Hoy en día, mientras contemplo la fotografía de mi padre sujetando mis pequeñas manos, puedo imaginar la seguridad que me otorgaron sus fuertes brazos. Estoy seguro que gracias a ello aprendí a caminar en tan solo diez meses.
 
 <ul id="js-gallery" class="gallery  gallery--1-of-3">
-  <li data-img="/assets/img/essays/{{ page.slug }}.img.01.jpg">
-    <img src="/assets/img/essays/{{ page.slug }}.thumb.01.jpg"/>
+  <li data-img="{{ '/assets/img/essays/' | append: page.slug | prepend: site.baseurl }}.thumb.01.jpg">
+    <img src="{{ '/assets/img/essays/' | append: page.slug | prepend: site.baseurl }}.thumb.01.jpg"/>
   </li><!--
---><li data-img="/assets/img/essays/{{ page.slug }}.img.02.jpg">
-    <img src="/assets/img/essays/{{ page.slug }}.thumb.02.jpg"/>
+--><li data-img="{{ '/assets/img/essays/' | append: page.slug | prepend: site.baseurl }}.thumb.02.jpg">
+    <img src="{{ '/assets/img/essays/' | append: page.slug | prepend: site.baseurl }}.thumb.02.jpg"/>
   </li><!--
---><li data-img="/assets/img/essays/{{ page.slug }}.img.03.jpg">
-    <img src="/assets/img/essays/{{ page.slug }}.thumb.03.jpg"/>
+--><li data-img="{{ '/assets/img/essays/' | append: page.slug | prepend: site.baseurl }}.thumb.03.jpg">
+    <img src="{{ '/assets/img/essays/' | append: page.slug | prepend: site.baseurl }}.thumb.03.jpg"/>
   </li>
 </ul><!-- /layout -->
 

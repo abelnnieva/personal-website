@@ -4,7 +4,7 @@ subtitle: Front End Software Developer
 email: abel@abelnieva.com
 description: > # this means to ignore newlines until "baseurl:"
   Desarrollador de software, fotógrafo urbano, adicto al conocimiento, emprendedor, ensayista, enfocado en el estudio y exposición de la Biblia.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/personal-website" # the subpath of your site, e.g. /blog
 url: "https://abelnieva.com" # the base hostname & protocol for your site
 enforce_ssl: abelnieva.com
 twitter_username: abelnieva
@@ -15,7 +15,16 @@ markdown: kramdown
 incremental: false
 paginate: 10
 excerpt_separator: <!--more-->
-exclude: [bower_components, node_modules, bower.json, gulpfile.js, LICENSE.txt, package.json, README.md]
+exclude:
+  [
+    bower_components,
+    node_modules,
+    bower.json,
+    gulpfile.js,
+    LICENSE.txt,
+    package.json,
+    README.md,
+  ]
 
 # Gems
 gems: [jekyll-paginate]
@@ -23,8 +32,7 @@ gems: [jekyll-paginate]
 # Defaults
 
 defaults:
-  -
-    scope:
+  - scope:
       type: posts
     values:
       layout: post

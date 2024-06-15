@@ -10,7 +10,7 @@ layout: default
     itemscope itemType="http://schema.org/BlogPosting">
 
     {% if type == 'page--essays' %}
-    <img src="/assets/img/essays/{{ page.slug }}.jpg" class="post__cover" itemprop="image">
+    <img src="{{ '/assets/img/essays/' | append: page.slug | prepend: site.baseurl }}.jpg" class="post__cover" itemprop="image" />
     {% endif %}
 
     <div>
@@ -40,7 +40,7 @@ layout: default
         <ul class="list-inline  list-inline--inline" itemprop="keywords" itemscope itemtype="http://schema.org/ItemList">
         {% for category in page.categories %}
           <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-            <a href="/ensayos/{{ category | replace: 'á', 'a' | replace: 'é', 'a' | replace: 'í', 'i' | replace: 'ó', 'o' | replace: 'ú', 'u' }}/"
+            <a href="{{ site.baseurl }}/ensayos/{{ category | replace: 'á', 'a' | replace: 'é', 'a' | replace: 'í', 'i' | replace: 'ó', 'o' | replace: 'ú', 'u' }}/"
               class="tag" itemprop="item">{{ category | capitalize }}</a>
           </li>
         {% endfor %}
@@ -53,7 +53,7 @@ layout: default
 
     {% if type == 'page--books' %}
     <figure class="post__cover" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-      <img src="/assets/img/books/{{ page.slug }}.jpg" itemprop="contentUrl">
+      <img src="{{ '/assets/img/books/' | append: page.slug | prepend: site.baseurl }}.jpg" itemprop="contentUrl" />
       <figcaption itemprop="caption">{{ page.book-data }}</figcaption>
     </figure>
     {% endif %}
@@ -61,7 +61,7 @@ layout: default
     {{ content }}
 
     <small class="media  media--autor" itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <img src="/assets/img/abelnieva.avatar.jpg" alt="" class="media__img" itemprop="image" />
+      <img src="{{ "/assets/img/abelnieva.avatar.jpg" | prepend: site.baseurl }}" alt="" class="media__img" itemprop="image" />
       <div class="media__body">
         <h6 class="media__title" itemprop="name">Abel Nieva</h6>
         <p itemprop="description">Desarrollador de software en <a href="http://www.gft.com/es/" target="_blank">GFT
@@ -78,7 +78,7 @@ layout: default
     <ul class="list-bare  [ list  list--category ]" role="navigation" itemscope
       itemtype="http://schema.org/SiteNavigationElement">
       {% for category in site.essays_categories %}
-        <li><a href="/ensayos/{{ category | replace: 'á', 'a' | replace: 'é', 'a' | replace: 'í', 'i' | replace: 'ó', 'o' | replace: 'ú', 'u' }}/"
+        <li><a href="{{ site.baseurl }}/ensayos/{{ category | replace: 'á', 'a' | replace: 'é', 'a' | replace: 'í', 'i' | replace: 'ó', 'o' | replace: 'ú', 'u' }}/"
           class="link  link--clear" title="{{ category | capitalize }}" itemprop="name">{{ category | capitalize }}</a></li>
       {% endfor %}
     </ul><!-- /list-inline -->

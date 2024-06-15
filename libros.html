@@ -8,11 +8,11 @@ permalink: /libros/
 <ul class="layout">
   {% for post in site.posts %}{% if post.categories contains 'books' %}
     <li class="layout__item  [ u-1-of-1-palm  u-1-of-2-lap  u-1-of-3-desk ]  u-mb">
-      <a href="{{ post.url }}" class="link  link--reset">
+      <a href="{{ post.url | prepend: site.baseurl }}" class="link  link--reset">
 
         <article class="block  block--book" itemscope itemType="http://schema.org/BlogPosting">
           <div class="block__img">
-            <img src="/assets/img/books/{{ post.slug }}.jpg" itemprop="thumbnail">
+            <img src="{{ '/assets/img/books/' | append: post.slug | prepend: site.baseurl }}.jpg" itemprop="thumbnail" />
           </div>
           <div class="block__body">
 

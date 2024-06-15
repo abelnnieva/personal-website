@@ -8,14 +8,14 @@ permalink: /archivo/
 <ul class="layout  u-mb" itemscope itemtype="http://schema.org/ItemList">
   {% for post in site.posts %}<!--
   --><li class="layout__item  [ u-1-of-1-palm  u-1-of-2-lap  u-1-of-3-desk ]  u-mb" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-      <a href="{{ post.url }}" class="link  link--reset  link--ui">
+      <a href="{{ post.url | prepend: site.baseurl }}" class="link  link--reset  link--ui">
 
         <article class="post  u-mb0" itemprop="item" itemscope itemType="http://schema.org/BlogPosting" itemid="{{ post.url }}">
           {% include time.html %}
 
           <h4 class="post__title  u-mb0" itemprop="headline">{{ post.title }}</h4>
 
-          <link href="{{ post.url }}" itemprop="url" />
+          <link href="{{ post.url | prepend: site.baseurl }}" itemprop="url" />
         </article><!-- /post -->
 
       </a>

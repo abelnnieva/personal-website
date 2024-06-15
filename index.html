@@ -6,7 +6,7 @@ page-class: page--home
 <div class="region">
 
   <figure class="region__image-left  u-1-of-1-palm" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-    <img src="/assets/img/abelnieva.jpg" alt="Abel Nieva" itemprop="contentUrl">
+    <img src="{{ "/assets/img/abelnieva.jpg" | prepend: site.baseurl }}" alt="Abel Nieva" itemprop="contentUrl">
   </figure>
 
   <h3 class="region__title" itemprop="headline">Desarrollador de software, fotógrafo urbano, adicto al conocimiento,
@@ -26,16 +26,16 @@ page-class: page--home
 
   <ul class="layout  layout--flush" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <li class="layout__item  [ u-1-of-1-palm  u-1-of-4 ]">
-      <a href="/ensayos/" class="btn  btn--full  btn--clear" title="Ensayos" itemprop="name">Ensayos</a>
+      <a href="{{ site.baseurl }}/ensayos/" class="btn  btn--full  btn--clear" title="Ensayos" itemprop="name">Ensayos</a>
     </li><!--
 --><li class="layout__item  [ u-1-of-1-palm  u-1-of-4 ]">
-      <a href="/proyectos/" class="btn  btn--full  btn--clear" title="Software" itemprop="name">Software</a>
+      <a href="{{ site.baseurl }}/proyectos/" class="btn  btn--full  btn--clear" title="Software" itemprop="name">Software</a>
     </li><!--
 --><li class="layout__item  [ u-1-of-1-palm  u-1-of-4 ]">
-      <a href="/fotografias/" class="btn  btn--full  btn--clear" title="Fotografías" itemprop="name">Fotografías</a>
+      <a href="{{ site.baseurl }}/fotografias/" class="btn  btn--full  btn--clear" title="Fotografías" itemprop="name">Fotografías</a>
     </li><!--
 --><li class="layout__item  [ u-1-of-1-palm  u-1-of-4 ]">
-      <a href="/libros/" class="btn  btn--full  btn--clear" title="Libros" itemprop="name">Libros</a>
+      <a href="{{ site.baseurl }}/libros/" class="btn  btn--full  btn--clear" title="Libros" itemprop="name">Libros</a>
     </li>
   </ul><!-- /layout -->
 
@@ -47,21 +47,21 @@ page-class: page--home
 
   <ul class="list-inline  list-inline--delimited  list-inline--inline" role="navigation" itemscope
     itemtype="http://schema.org/SiteNavigationElement">
-    <li><a href="/resoluciones/" class="link  link--black" title="Resoluciones Personales" itemprop="name">Resoluciones
+    <li><a href="{{ site.baseurl }}/resoluciones/" class="link  link--black" title="Resoluciones Personales" itemprop="name">Resoluciones
       Personales</a></li>
-    <li><a href="/viajes/" class="link  link--black" title="Historial de Viajes" itemprop="name">Historial de
+    <li><a href="{{ site.baseurl }}/viajes/" class="link  link--black" title="Historial de Viajes" itemprop="name">Historial de
       Viajes</a></li>
-    <li><a href="/archivo/" class="link  link--black" title="Archivo" itemprop="name">Archivo</a></li>
+    <li><a href="{{ site.baseurl }}/archivo/" class="link  link--black" title="Archivo" itemprop="name">Archivo</a></li>
   </ul><!-- /list-inline -->
 
 </div><!-- /region -->
 
 <section class="region  u-mb++" itemscope itemtype="http://schema.org/ItemList">
 
-  <h2 class="region__title" itemprop="name">Artículos Recientes <a href="/ensayos/" title="Ver todos los ensayos">
+  <h2 class="region__title" itemprop="name">Artículos Recientes <a href="{{ site.baseurl }}/ensayos/" title="Ver todos los ensayos">
     Ver todos</a></h2>
 
-  <link href="/ensayos/" itemprop="url" />
+  <link href="{{ site.baseurl }}/ensayos/" itemprop="url" />
 
   <ul class="list  list--responsive">
   {% for post in site.posts limit:6 %}
@@ -72,10 +72,10 @@ page-class: page--home
         itemid="{{ post.url }}">
         {% include time.html %}
 
-        <h4 class="post__title" itemprop="headline"><a href="{{ post.url }}" title="{{ post.title }}"
+        <h4 class="post__title" itemprop="headline"><a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}"
           class="link  link--clear">{{ post.title }}</a></h4>
 
-        <link href="{{ post.url }}" itemprop="url" />
+        <link href="{{ post.url | prepend: site.baseurl }}" itemprop="url" />
       </article><!-- /post -->
 
     </li>
@@ -87,17 +87,17 @@ page-class: page--home
 
 <article class="region  u-mb++">
 
-  <h2 class="region__title">Reseñas de Libros <a href="/libros/">Ver todos</a></h2>
+  <h2 class="region__title">Reseñas de Libros <a href="{{ site.baseurl }}/libros/">Ver todos</a></h2>
 
   <ul class="layout">
     {% for post in site.posts limit:4 %}{% if post.categories contains 'books' %}
       <li class="layout__item  [ u-1-of-1-palm  u-1-of-2-lap  u-1-of-3 ]  u-mb">
-        <a href="{{ post.url }}" class="link  link--reset">
+        <a href="{{ post.url | prepend: site.baseurl }}" class="link  link--reset">
 
           <div class="block  block--book">
 
             <div class="block__img">
-              <img src="/assets/img/books/{{ post.slug }}.jpg"/>
+              <img src="{{ '/assets/img/books/' | append: post.slug | prepend: site.baseurl }}.jpg" />
             </div>
 
             <div class="block__body">
